@@ -1,517 +1,204 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Рекламное агентство | Приводим заявки, а не клики</title>
-    <meta name="description" content="Честное продвижение бизнеса: контекстная реклама, SEO и разработка сайтов. Проверка перед запуском. Оплата за результат. Бесплатный аудит.">
-    <meta name="keywords" content="контекстная реклама, seo продвижение, разработка сайтов, лидогенерация, маркетинговое агентство">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Рекламное агентство | Приводим заявки, а не клики">
-    <meta property="og:description" content="Честное продвижение бизнеса. Проверка сайта перед рекламой. Кейсы с цифрами.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yoursite.com">
-    <meta property="og:image" content="assets/og-image.jpg">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
-    
-    <!-- Preload fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Digital-агентство: контекстная реклама, SEO, разработка сайтов и сквозная аналитика для роста продаж." />
+  <title>DigitalWave — агентство интернет-маркетинга</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container header-content">
-            <a href="/" class="logo">
-                <span class="logo-icon">📈</span>
-                <span class="logo-text">LeadGenerator</span>
-            </a>
-            
-            <nav class="nav" id="mainNav">
-                <a href="#services" class="nav-link">Услуги</a>
-                <a href="#cases" class="nav-link">Кейсы</a>
-                <a href="#process" class="nav-link">Как работаем</a>
-                <a href="#faq" class="nav-link">FAQ</a>
-                <a href="#contact" class="nav-link nav-cta">Бесплатный аудит</a>
-            </nav>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Меню">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
+  <header class="header" id="top">
+    <div class="container nav-wrap">
+      <a href="#top" class="logo">Digital<span>Wave</span></a>
+      <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+      <nav class="nav" aria-label="Главное меню">
+        <a href="#services">Услуги</a>
+        <a href="#benefits">Преимущества</a>
+        <a href="#steps">Этапы</a>
+        <a href="#cases">Кейсы</a>
+        <a href="#pricing">Тарифы</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact-form">Заявка</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
+  <main>
     <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-badge">Честно о рекламе</div>
-            <h1 class="hero-title">Приводим <span class="highlight">заявки</span>, а не клики</h1>
-            <p class="hero-subtitle">
-                Проверим ваш сайт перед запуском рекламы. Если он не готов к конверсии — скажем прямо и предложим решение. 
-                Никаких пустых обещаний и слива бюджета.
-            </p>
-            
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary btn-large">Получить бесплатный аудит</a>
-                <a href="#cases" class="btn btn-secondary btn-large">Смотреть кейсы</a>
-            </div>
-            
-            <div class="hero-trust">
-                <div class="trust-item">
-                    <span class="trust-number">150+</span>
-                    <span class="trust-label">проектов</span>
-                </div>
-                <div class="trust-item">
-                    <span class="trust-number">85%</span>
-                    <span class="trust-label">клиентов остаются</span>
-                </div>
-                <div class="trust-item">
-                    <span class="trust-number">от 3 мес</span>
-                    <span class="trust-label">первый результат</span>
-                </div>
-            </div>
+      <div class="container hero-grid">
+        <div>
+          <p class="tag">Агентство для российского рынка</p>
+          <h1>Приводим клиентов из&nbsp;поиска и&nbsp;рекламы, превращая трафик в&nbsp;продажи</h1>
+          <p class="subtitle">Помогаем компаниям из России стабильно получать заявки: контекст, SEO, сайты и сквозная аналитика в одном окне.</p>
+          <div class="hero-actions">
+            <a href="#contact-form" class="btn btn-primary">Оставить заявку</a>
+            <a href="#cases" class="btn btn-secondary">Смотреть кейсы</a>
+          </div>
+          <ul class="metrics">
+            <li><strong>120+</strong><span>проектов в портфолио</span></li>
+            <li><strong>38%</strong><span>средний рост заявок</span></li>
+            <li><strong>7 лет</strong><span>опыта команды</span></li>
+          </ul>
         </div>
+        <div class="hero-card">
+          <h3>Бесплатный аудит</h3>
+          <p>Оценим текущие рекламные каналы, найдём точки роста и подготовим прогноз по лидам.</p>
+          <a href="#contact-form" class="btn btn-primary full">Получить аудит</a>
+        </div>
+      </div>
     </section>
 
-    <!-- Pain Points -->
-    <section class="pain-points">
-        <div class="container">
-            <h2 class="section-title">Знакомо?</h2>
-            <p class="section-subtitle">Типичные проблемы, с которыми сталкиваются владельцы бизнеса</p>
-            
-            <div class="pain-grid">
-                <div class="pain-card">
-                    <div class="pain-icon">💸</div>
-                    <h3>Слив бюджета</h3>
-                    <p>Реклама работает, клики есть, а заявок нет. Бюджет уходит, а ROI отрицательный.</p>
-                </div>
-                <div class="pain-card">
-                    <div class="pain-icon">🎯</div>
-                    <h3>Не те клиенты</h3>
-                    <p>Звонят «просто спросить», школьники или конкуренты. Нет целевых лидов.</p>
-                </div>
-                <div class="pain-card">
-                    <div class="pain-icon">📉</div>
-                    <h3>Сайт не конвертит</h3>
-                    <p>Трафик идет, но посетители уходят без действий. Сайт не продает.</p>
-                </div>
-                <div class="pain-card">
-                    <div class="pain-icon">🤷</div>
-                    <h3>Нет прозрачности</h3>
-                    <p>Агентства присылают отчеты с красивыми графиками, но непонятно, где деньги.</p>
-                </div>
-            </div>
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Услуги</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <h3>Контекстная реклама</h3>
+            <p>Запускаем и оптимизируем кампании в Яндекс Директ и Google Ads с фокусом на стоимость лида.</p>
+          </article>
+          <article class="card">
+            <h3>SEO-продвижение</h3>
+            <p>Выводим сайт в топ выдачи и увеличиваем органический трафик через техническое и контентное SEO.</p>
+          </article>
+          <article class="card">
+            <h3>Разработка сайтов</h3>
+            <p>Создаём быстрые и конверсионные сайты: лендинги, корпоративные сайты и интернет-магазины.</p>
+          </article>
+          <article class="card">
+            <h3>Сквозная аналитика</h3>
+            <p>Настраиваем аналитику от первого клика до сделки: CRM, коллтрекинг, отчёты в реальном времени.</p>
+          </article>
         </div>
+      </div>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Наши услуги</h2>
-            <p class="section-subtitle">Только то, что приносит реальную прибыль</p>
-            
-            <div class="services-grid">
-                <!-- Context Service -->
-                <article class="service-card">
-                    <div class="service-badge">Популярное</div>
-                    <div class="service-icon">🔍</div>
-                    <h3>Контекстная реклама</h3>
-                    <p class="service-desc">Яндекс.Директ и Google Ads. Настраиваем так, чтобы каждая копейка работала на заявку.</p>
-                    
-                    <ul class="service-benefits">
-                        <li>✅ Аудит сайта перед запуском</li>
-                        <li>✅ Прозрачная отчетность по лидам</li>
-                        <li>✅ Оптимизация ставок в реальном времени</li>
-                        <li>✅ Минимальная стоимость заявки</li>
-                    </ul>
-                    
-                    <div class="service-lead-magnet">
-                        <h4>🎁 Полезно знать</h4>
-                        <p>Скачайте калькулятор стоимости лида и узнайте, сколько реально стоит заявка в вашей нише.</p>
-                        <button class="btn btn-outline btn-small open-modal" data-modal="contextModal">Рассчитать стоимость лида</button>
-                    </div>
-                    
-                    <a href="context.html" class="btn btn-primary btn-full">Подробнее об услуге</a>
-                </article>
-
-                <!-- SEO Service -->
-                <article class="service-card">
-                    <div class="service-icon">🌱</div>
-                    <h3>SEO продвижение</h3>
-                    <p class="service-desc">Выводим в ТОП не ради позиций, а ради денег. Органический трафик, который конвертирует.</p>
-                    
-                    <ul class="service-benefits">
-                        <li>✅ Аудит текущих позиций и ошибок</li>
-                        <li>✅ Стратегия под коммерческие запросы</li>
-                        <li>✅ Работа над юзабилити и конверсией</li>
-                        <li>✅ Долгосрочный эффект без доплат за клик</li>
-                    </ul>
-                    
-                    <div class="service-lead-magnet">
-                        <h4>🎁 Полезно знать</h4>
-                        <p>Гайд «Почему позиции ≠ деньги»: как избежать типичных ошибок в SEO и не слить бюджет.</p>
-                        <button class="btn btn-outline btn-small open-modal" data-modal="seoModal">Скачать гайд</button>
-                    </div>
-                    
-                    <a href="seo.html" class="btn btn-primary btn-full">Подробнее об услуге</a>
-                </article>
-
-                <!-- Development Service -->
-                <article class="service-card">
-                    <div class="service-icon">💻</div>
-                    <h3>Разработка сайтов</h3>
-                    <p class="service-desc">Создаем сайты, которые продают. Не просто красиво, а с продуманной воронкой продаж.</p>
-                    
-                    <ul class="service-benefits">
-                        <li>✅ Анализ ЦА и конкурентов перед стартом</li>
-                        <li>✅ Прототипирование с фокусом на конверсию</li>
-                        <li>✅ Интеграция с CRM и аналитикой</li>
-                        <li>✅ Тестирование на реальных пользователях</li>
-                    </ul>
-                    
-                    <div class="service-lead-magnet">
-                        <h4>🎁 Полезно знать</h4>
-                        <p>Чек-лист «Готов ли ваш сайт к трафику?»: 15 пунктов, которые проверят эффективность вашего сайта.</p>
-                        <button class="btn btn-outline btn-small open-modal" data-modal="devModal">Скачать чек-лист</button>
-                    </div>
-                    
-                    <a href="development.html" class="btn btn-primary btn-full">Подробнее об услуге</a>
-                </article>
-            </div>
+    <section id="benefits" class="section section-accent">
+      <div class="container">
+        <h2>Почему выбирают нас</h2>
+        <div class="benefits-grid">
+          <div><h3>Прозрачность</h3><p>Понятные KPI, еженедельные отчёты и доступ к рабочим кабинетам.</p></div>
+          <div><h3>Команда экспертов</h3><p>Сертифицированные специалисты по рекламе, SEO, аналитике и UX.</p></div>
+          <div><h3>Гипотезы и тесты</h3><p>Постоянно тестируем креативы, аудитории и воронки, чтобы снижать CPL.</p></div>
+          <div><h3>Фокус на бизнесе</h3><p>Считаем не клики, а деньги: ROMI, выручка, LTV и реальная эффективность.</p></div>
         </div>
+      </div>
     </section>
 
-    <!-- Cases -->
-    <section id="cases" class="cases">
-        <div class="container">
-            <h2 class="section-title">Кейсы с цифрами</h2>
-            <p class="section-subtitle">Реальные результаты наших клиентов</p>
-            
-            <div class="cases-grid">
-                <article class="case-card">
-                    <div class="case-header">
-                        <span class="case-category">Интернет-магазин мебели</span>
-                        <span class="case-result">+240% ROI</span>
-                    </div>
-                    <h3>Контекстная реклама с окупаемостью 240%</h3>
-                    <ul class="case-metrics">
-                        <li><strong>Бюджет:</strong> 150 000 ₽/мес</li>
-                        <li><strong>Заявок:</strong> 85 шт/мес</li>
-                        <li><strong>Стоимость лида:</strong> 1 765 ₽</li>
-                        <li><strong>Средний чек:</strong> 45 000 ₽</li>
-                    </ul>
-                    <p class="case-desc">Провели полный аудит сайта, переупаковали посадочные страницы, настроили сквозную аналитику. Через 2 месяца вышли на окупаемость 240%.</p>
-                    <a href="#contact" class="btn btn-link">Хочу такой же результат →</a>
-                </article>
-
-                <article class="case-card">
-                    <div class="case-header">
-                        <span class="case-category">Строительная компания</span>
-                        <span class="case-result">x3 заявки</span>
-                    </div>
-                    <h3>SEO продвижение: рост заявок в 3 раза</h3>
-                    <ul class="case-metrics">
-                        <li><strong>Было заявок:</strong> 12 шт/мес</li>
-                        <li><strong>Стало заявок:</strong> 36 шт/мес</li>
-                        <li><strong>Позиции ТОП-3:</strong> 45 запросов</li>
-                        <li><strong>Срок:</strong> 6 месяцев</li>
-                    </ul>
-                    <p class="case-desc">Сфокусировались на коммерческих запросах с высокой конверсией. Переработали структуру сайта и контент. Результат — стабильный поток заявок из органики.</p>
-                    <a href="#contact" class="btn btn-link">Хочу такой же результат →</a>
-                </article>
-
-                <article class="case-card">
-                    <div class="case-header">
-                        <span class="case-category">Онлайн-школа</span>
-                        <span class="case-result">CR 8.5%</span>
-                    </div>
-                    <h3>Разработка лендинга с конверсией 8.5%</h3>
-                    <ul class="case-metrics">
-                        <li><strong>Было CR:</strong> 1.2%</li>
-                        <li><strong>Стало CR:</strong> 8.5%</li>
-                        <li><strong>Рост заявок:</strong> +610%</li>
-                        <li><strong>Срок разработки:</strong> 3 недели</li>
-                    </ul>
-                    <p class="case-desc">Полностью переработали структуру, добавили социальные доказательства, упростили форму захвата. Конверсия выросла в 7 раз при том же трафике.</p>
-                    <a href="#contact" class="btn btn-link">Хочу такой же результат →</a>
-                </article>
-            </div>
-        </div>
+    <section id="steps" class="section">
+      <div class="container">
+        <h2>Этапы работы</h2>
+        <ol class="steps">
+          <li><span>1</span><div><h3>Бриф и аудит</h3><p>Изучаем нишу, конкурентов, продукты и текущие рекламные активности.</p></div></li>
+          <li><span>2</span><div><h3>Стратегия</h3><p>Формируем медиаплан, KPI и воронку с прогнозом по обращениям.</p></div></li>
+          <li><span>3</span><div><h3>Запуск</h3><p>Настраиваем рекламные кампании, аналитику и посадочные страницы.</p></div></li>
+          <li><span>4</span><div><h3>Оптимизация</h3><p>Ежедневно улучшаем показатели и масштабируем прибыльные связки.</p></div></li>
+        </ol>
+      </div>
     </section>
 
-    <!-- Process -->
-    <section id="process" class="process">
-        <div class="container">
-            <h2 class="section-title">Как мы работаем</h2>
-            <p class="section-subtitle">Прозрачный процесс без скрытых этапов</p>
-            
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3>Бесплатный аудит</h3>
-                    <p>Анализируем ваш сайт, текущую рекламу и конкурентов. Честно говорим о перспективах и рисках.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3>Стратегия и план</h3>
-                    <p>Составляем пошаговый план работ с прогнозом результатов, сроков и бюджета.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3>Запуск и тесты</h3>
-                    <p>Запускаем рекламу/продвижение, тестируем гипотезы, оптимизируем под максимальную конверсию.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3>Масштабирование</h3>
-                    <p>Когда находим рабочую связку — увеличиваем бюджет и масштабируем результат.</p>
-                </div>
-            </div>
+    <section id="cases" class="section section-accent">
+      <div class="container">
+        <h2>Кейсы</h2>
+        <div class="cards-grid">
+          <article class="card case">
+            <h3>eCommerce / Товары для дома</h3>
+            <p>Увеличили онлайн-заказы на 62% за 4 месяца за счёт SEO и контекста.</p>
+          </article>
+          <article class="card case">
+            <h3>B2B / Промышленное оборудование</h3>
+            <p>Снизили стоимость квалифицированного лида на 41% через сквозную аналитику.</p>
+          </article>
+          <article class="card case">
+            <h3>Услуги / Медицинская клиника</h3>
+            <p>Рост записей на приём в 2,1 раза благодаря новой воронке и редизайну сайта.</p>
+          </article>
         </div>
+      </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq" class="faq">
-        <div class="container">
-            <h2 class="section-title">Частые вопросы</h2>
-            <p class="section-subtitle">Отвечаем честно, без маркетинговой шелухи</p>
-            
-            <div class="faq-list">
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <span>Сколько стоит настройка рекламы?</span>
-                        <span class="faq-icon">+</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p>Стоимость зависит от сложности проекта и количества рекламных кампаний. В среднем от 30 000 ₽ за настройку. Но важнее не цена настройки, а окупаемость. Мы берем фикс + % от результата, чтобы быть заинтересованными в вашем успехе.</p>
-                    </div>
-                </details>
-                
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <span>Какие гарантии вы даете?</span>
-                        <span class="faq-icon">+</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p>Мы не гарантируем конкретное количество заявок, потому что на конверсию влияет много факторов (сайт, продукт, сезонность). Но гарантируем прозрачную отчетность, постоянную оптимизацию и честную обратную связь. Если видим, что реклама не окупится — скажем сразу.</p>
-                    </div>
-                </details>
-                
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <span>Через сколько будет результат?</span>
-                        <span class="faq-icon">+</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p>Контекстная реклама дает первые заявки через 3-7 дней после запуска. SEO — через 3-6 месяцев. Разработка сайта — 2-4 недели. Точные сроки обсудим на аудите после анализа вашей ниши.</p>
-                    </div>
-                </details>
-                
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <span>Что если мой сайт не готов к рекламе?</span>
-                        <span class="faq-icon">+</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p>Мы честно скажем об этом на этапе аудита. Предложим варианты: доработать текущий сайт, сделать новый лендинг или запустить рекламу на другие площадки. Запускать рекламу на неконвертящий сайт — сливать бюджет. Мы этого не делаем.</p>
-                    </div>
-                </details>
-                
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <span>Работаете ли вы с маленькими бюджетами?</span>
-                        <span class="faq-icon">+</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p>Да, но с оговорками. Минимальный рекламный бюджет — от 50 000 ₽/мес. Если бюджет меньше, скорее всего, результат будет незаметен. На аудите рассчитаем оптимальный бюджет для вашей ниши и покажем прогноз.</p>
-                    </div>
-                </details>
-            </div>
+    <section id="pricing" class="section">
+      <div class="container">
+        <h2>Тарифы</h2>
+        <div class="pricing-grid">
+          <article class="price-card">
+            <h3>Start</h3>
+            <p class="price">от 45 000 ₽/мес</p>
+            <ul><li>1 канал продвижения</li><li>Ежемесячная отчётность</li><li>Поддержка менеджера</li></ul>
+            <a href="#contact-form" class="btn btn-secondary full">Выбрать</a>
+          </article>
+          <article class="price-card featured">
+            <h3>Growth</h3>
+            <p class="price">от 95 000 ₽/мес</p>
+            <ul><li>SEO + контекст + аналитика</li><li>Еженедельные созвоны</li><li>Работа с конверсией сайта</li></ul>
+            <a href="#contact-form" class="btn btn-primary full">Оставить заявку</a>
+          </article>
+          <article class="price-card">
+            <h3>Scale</h3>
+            <p class="price">от 160 000 ₽/мес</p>
+            <ul><li>Мультиканальный маркетинг</li><li>Сквозная аналитика и BI</li><li>Выделенная команда</li></ul>
+            <a href="#contact-form" class="btn btn-secondary full">Выбрать</a>
+          </article>
         </div>
+      </div>
     </section>
 
-    <!-- Contact Form -->
-    <section id="contact" class="contact">
-        <div class="container contact-container">
-            <div class="contact-content">
-                <h2 class="section-title">Получите бесплатный экспресс-аудит</h2>
-                <p class="contact-desc">
-                    Оставьте заявку, и мы проведем бесплатный анализ вашего сайта и текущей рекламы. 
-                    В течение 24 часов пришлем отчет с рекомендациями и точками роста.
-                </p>
-                
-                <ul class="contact-benefits">
-                    <li>✅ Анализ текущего сайта на конверсию</li>
-                    <li>✅ Оценка качества рекламы (если есть)</li>
-                    <li>✅ Сравнение с конкурентами</li>
-                    <li>✅ План действий на 3 месяца</li>
-                    <li>✅ Прогноз бюджета и результатов</li>
-                </ul>
-            </div>
-            
-            <form class="contact-form" id="auditForm">
-                <div class="form-group">
-                    <label for="name">Ваше имя</label>
-                    <input type="text" id="name" name="name" placeholder="Иван Петров" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">Телефон</label>
-                    <input type="tel" id="phone" name="phone" placeholder="+7 (999) 000-00-00" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="ivan@company.ru" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="website">Сайт (если есть)</label>
-                    <input type="url" id="website" name="website" placeholder="https://mysite.ru">
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Комментарий</label>
-                    <textarea id="message" name="message" placeholder="Расскажите о вашей задаче..." rows="4"></textarea>
-                </div>
-                
-                <button type="submit" class="btn btn-primary btn-full btn-large">Получить бесплатный аудит</button>
-                
-                <p class="form-disclaimer">
-                    Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности. 
-                    Мы не передаем ваши данные третьим лицам.
-                </p>
-            </form>
+    <section id="faq" class="section section-accent">
+      <div class="container">
+        <h2>FAQ</h2>
+        <div class="faq-list">
+          <details>
+            <summary>Когда появятся первые результаты?</summary>
+            <p>Первые заявки обычно приходят в течение 1–2 недель после запуска рекламы. SEO-результаты — в среднем от 2–4 месяцев.</p>
+          </details>
+          <details>
+            <summary>Можно ли начать с одного канала?</summary>
+            <p>Да, мы можем стартовать с контекста или SEO, а затем масштабировать стратегию на другие каналы.</p>
+          </details>
+          <details>
+            <summary>Как вы подтверждаете эффективность?</summary>
+            <p>Через прозрачные KPI, дашборды и сквозную аналитику, где виден путь клиента до оплаты.</p>
+          </details>
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <a href="/" class="logo">
-                    <span class="logo-icon">📈</span>
-                    <span class="logo-text">LeadGenerator</span>
-                </a>
-                <p>Приводим заявки, а не клики. Честно о рекламе.</p>
-            </div>
-            
-            <div class="footer-links">
-                <h4>Услуги</h4>
-                <a href="context.html">Контекстная реклама</a>
-                <a href="seo.html">SEO продвижение</a>
-                <a href="development.html">Разработка сайтов</a>
-            </div>
-            
-            <div class="footer-links">
-                <h4>Компания</h4>
-                <a href="#cases">Кейсы</a>
-                <a href="#process">Как работаем</a>
-                <a href="#faq">FAQ</a>
-            </div>
-            
-            <div class="footer-contact">
-                <h4>Контакты</h4>
-                <a href="tel:+79990000000">+7 (999) 000-00-00</a>
-                <a href="mailto:hello@leadgenerator.ru">hello@leadgenerator.ru</a>
-                <div class="social-links">
-                    <a href="#" aria-label="Telegram">TG</a>
-                    <a href="#" aria-label="WhatsApp">WA</a>
-                    <a href="#" aria-label="VKontakte">VK</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="container footer-bottom">
-            <p>&copy; 2024 LeadGenerator. Все права защищены.</p>
-            <a href="#">Политика конфиденциальности</a>
-        </div>
-    </footer>
+    <section id="contact-form" class="section">
+      <div class="container">
+        <h2>Оставьте заявку</h2>
+        <form class="lead-form" id="lead-form">
+          <label>Имя<input type="text" name="name" required placeholder="Ваше имя" /></label>
+          <label>Телефон<input type="tel" name="phone" required placeholder="+7 (___) ___-__-__" /></label>
+          <label>Email<input type="email" name="email" required placeholder="you@company.ru" /></label>
+          <label>Комментарий<textarea name="comment" rows="4" placeholder="Кратко о задаче"></textarea></label>
+          <button type="submit" class="btn btn-primary">Отправить заявку</button>
+          <p class="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
 
-    <!-- Modals -->
-    <!-- Context Modal -->
-    <div class="modal" id="contextModal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Закрыть">&times;</button>
-            <h3>🎁 Калькулятор стоимости лида</h3>
-            <p>Узнайте, сколько реально стоит заявка в вашей нише. Введите email, и мы отправим калькулятор + примеры из вашей отрасли.</p>
-            <form class="modal-form lead-form" data-type="context_calculator">
-                <div class="form-group">
-                    <label for="contextName">Ваше имя</label>
-                    <input type="text" id="contextName" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="contextEmail">Email</label>
-                    <input type="email" id="contextEmail" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="contextPhone">Телефон</label>
-                    <input type="tel" id="contextPhone" name="phone" required>
-                </div>
-                <button type="submit" class="btn btn-primary btn-full">Получить калькулятор</button>
-            </form>
-        </div>
+  <footer id="contacts" class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#top" class="logo">Digital<span>Wave</span></a>
+        <p>Агентство performance-маркетинга для роста бизнеса в digital.</p>
+      </div>
+      <div>
+        <h3>Контакты</h3>
+        <p>Москва, Пресненская наб., 12</p>
+        <p><a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+        <p><a href="mailto:hello@digitalwave.ru">hello@digitalwave.ru</a></p>
+      </div>
+      <div>
+        <h3>Режим работы</h3>
+        <p>Пн–Пт: 09:00–19:00</p>
+        <p>Сб–Вс: выходные</p>
+      </div>
     </div>
+  </footer>
 
-    <!-- SEO Modal -->
-    <div class="modal" id="seoModal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Закрыть">&times;</button>
-            <h3>🎁 Гайд «Почему позиции ≠ деньги»</h3>
-            <p>Узнайте, как избежать типичных ошибок в SEO и не слить бюджет. Введите email, и мы отправим гайд + чек-лист проверки подрядчика.</p>
-            <form class="modal-form lead-form" data-type="seo_guide">
-                <div class="form-group">
-                    <label for="seoName">Ваше имя</label>
-                    <input type="text" id="seoName" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="seoEmail">Email</label>
-                    <input type="email" id="seoEmail" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="seoPhone">Телефон</label>
-                    <input type="tel" id="seoPhone" name="phone" required>
-                </div>
-                <button type="submit" class="btn btn-primary btn-full">Скачать гайд</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Dev Modal -->
-    <div class="modal" id="devModal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Закрыть">&times;</button>
-            <h3>🎁 Чек-лист «Готов ли сайт к трафику?»</h3>
-            <p>15 пунктов, которые проверят эффективность вашего сайта. Введите email, и мы отправим чек-лист + примеры хороших лендингов.</p>
-            <form class="modal-form lead-form" data-type="dev_checklist">
-                <div class="form-group">
-                    <label for="devName">Ваше имя</label>
-                    <input type="text" id="devName" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="devEmail">Email</label>
-                    <input type="email" id="devEmail" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="devPhone">Телефон</label>
-                    <input type="tel" id="devPhone" name="phone" required>
-                </div>
-                <button type="submit" class="btn btn-primary btn-full">Скачать чек-лист</button>
-            </form>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
