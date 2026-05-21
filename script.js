@@ -422,3 +422,29 @@ document.addEventListener('DOMContentLoaded', function() {
     
     console.log('LeadGenerator site initialized successfully! 🚀');
 });
+
+// =========================================
+// SCROLL REVEAL ANIMATION
+// =========================================
+document.addEventListener('DOMContentLoaded', function() {
+    const reveals = document.querySelectorAll('.reveal');
+    
+    function revealOnScroll() {
+        const windowHeight = window.innerHeight;
+        const elementVisible = 100;
+        
+        reveals.forEach((reveal) => {
+            const elementTop = reveal.getBoundingClientRect().top;
+            
+            if (elementTop < windowHeight - elementVisible) {
+                reveal.classList.add('active');
+            }
+        });
+    }
+    
+    // Initial check
+    revealOnScroll();
+    
+    // Listen for scroll
+    window.addEventListener('scroll', revealOnScroll);
+});
