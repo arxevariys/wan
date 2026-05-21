@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO продвижение для бизнеса | Позиции ≠ деньги, работаем на прибыль</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">AdAgency</div>
+            <nav class="nav">
+                <a href="index.html">Главная</a>
+                <a href="context.html">Контекст</a>
+                <a href="seo.html" class="active">SEO</a>
+                <a href="development.html">Разработка</a>
+            </nav>
+            <button class="btn btn-outline" onclick="scrollToElement('consultation')">Бесплатный аудит</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero hero-seo">
+        <div class="container">
+            <h1>SEO, которое приносит деньги, а не просто позиции</h1>
+            <p class="hero-subtitle">Забудьте про "топ-10 по запросам". Работаем над тем, что важно: трафик, который конвертируется в заявки и продажи. Честно говорим о сроках и перспективах.</p>
+            <div class="hero-cta">
+                <button class="btn btn-primary" onclick="openModal('lead-magnet-seo')">Получить гайд "Почему позиции ≠ деньги"</button>
+                <p class="hero-note">Бесплатно. Разберем 5 ошибок, которые губят ваше SEO.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Block -->
+    <section class="problems">
+        <div class="container">
+            <h2>Почему большинство компаний теряют деньги на SEO?</h2>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3>Гонятся за позициями, а не за продажами</h3>
+                    <p>Выводят сайт в топ по запросам, которые не приносят клиентов. Результат: позиции есть, денег нет.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3>Работают по шаблону без анализа</h3>
+                    <p>Делают то, что "всегда работало": закупка ссылок, техническая оптимизация. Но ваша ниша уникальна.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3>Не считают экономику проекта</h3>
+                    <p>Тратят 100 000 руб./мес на SEO, а получают заявок на 50 000. Отчет красивый, бизнес в минусе.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3>Обещают результат через 2 месяца</h3>
+                    <p>SEO — долгая игра. Те, кто обещает быстрый топ, либо врут, либо используют черные методы под санкции.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Approach -->
+    <section class="approach">
+        <div class="container">
+            <h2>Наш подход: SEO как инвестиция, а не расход</h2>
+            <div class="approach-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Аудит перед стартом</h3>
+                    <p>Проверяем сайт на технические ошибки, анализируем конкурентов, считаем потенциал трафика. Если видим, что SEO не окупится — говорим прямо и предлагаем альтернативы.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Стратегия под вашу экономику</h3>
+                    <p>Подбираем запросы не по частотности, а по коммерческой ценности. Фокус на том, что приносит деньги: транзакционные запросы, горячие аудитории.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Комплексная работа</h3>
+                    <p>Техническая оптимизация + контент + ссылки + юзабилити. Не делаем ничего по отдельности — только системный подход дает результат.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Прозрачная отчетность по деньгам</h3>
+                    <p>Показываем не позиции, а: рост трафика, стоимость лида из SEO, ROI проекта. Вы всегда знаете, окупается ли ваше вложение.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Magnet Guide -->
+    <section class="lead-magnet-section" id="lead-magnet-seo">
+        <div class="container">
+            <div class="lead-magnet-box">
+                <h2>📖 Гайд "Почему позиции ≠ деньги"</h2>
+                <p>Из этого руководства вы узнаете:</p>
+                <ul>
+                    <li>Почему топ-10 по высокочастотникам не работает в 2024</li>
+                    <li>Как подобрать запросы, которые реально продают</li>
+                    <li>5 метрик, которые важнее позиций в Яндексе и Google</li>
+                    <li>Как считать ROI от SEO и понимать, когда проект убыточен</li>
+                    <li>Чек-лист: 12 признаков, что ваше SEO сливает бюджет</li>
+                </ul>
+                <form onsubmit="downloadLeadMagnet(event, 'seo-guide')">
+                    <div class="form-group">
+                        <label>Ваше имя</label>
+                        <input type="text" required placeholder="Иван">
+                    </div>
+                    <div class="form-group">
+                        <label>Телефон</label>
+                        <input type="tel" required placeholder="+7 (___) ___-__-__">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" required placeholder="you@company.ru">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Получить гайд бесплатно</button>
+                    <p class="form-note">PDF на 24 страницы. Отправим в течение 5 минут</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cases -->
+    <section class="cases">
+        <div class="container">
+            <h2>Кейсы: рост трафика и продаж, а не позиций</h2>
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-header">
+                        <h3>Интернет-магазин автозапчастей</h3>
+                        <span class="case-niche">Ниша: E-commerce, B2C</span>
+                    </div>
+                    <div class="case-problem">
+                        <strong>Проблема:</strong> Трафик рос, продажи стояли на месте
+                    </div>
+                    <div class="case-solution">
+                        <strong>Что сделали:</strong> Пересмотрели семантику, убрали информационные запросы, оптимизировали карточки товаров под транзакционники
+                    </div>
+                    <div class="case-results">
+                        <div class="result-item">
+                            <span class="result-value">+180%</span>
+                            <span class="result-label">Рост продаж из SEO</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-value">420 руб.</span>
+                            <span class="result-label">Стоимость заказа</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-value">290%</span>
+                            <span class="result-label">ROI за 6 месяцев</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-header">
+                        <h3>Сеть стоматологических клиник</h3>
+                        <span class="case-niche">Ниша: Медицина, услуги</span>
+                    </div>
+                    <div class="case-problem">
+                        <strong>Проблема:</strong> Конкуренты выкупили все коммерческие запросы
+                    </div>
+                    <div class="case-solution">
+                        <strong>Что сделали:</strong> Создали 45 посадочных под узкие услуги, настроили локальное SEO, работали с отзывами
+                    </div>
+                    <div class="case-results">
+                        <div class="result-item">
+                            <span class="result-value">+340%</span>
+                            <span class="result-label">Рост записей из поиска</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-value">890 руб.</span>
+                            <span class="result-label">Стоимость записи</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-value">x3.2</span>
+                            <span class="result-label">Рост выручки</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-header">
+                        <h3>Производственная компания</h3>
+                        <span class="case-niche">Ниша: B2B, опт</span>
+                    </div>
+                    <div class="case-problem">
+                        <strong>Проблема:</strong> Нулевой органический трафик, зависимость от контекста
+                    </div>
+                    <div class="case-solution">
+                        <strong>Что сделали:</strong> Разработали контент-стратегию для ЛПР, создали базу знаний, настроили микроразметку
+                    </div>
+                    <div class="case-results">
+                        <div class="result-item">
+                            <span class="result-value">62</span>
+                            <span class="result-label">Заявки в месяц из SEO</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-value">12 000 руб.</span>
+                            <span class="result-label">Средний чек сделки</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-value">450%</span>
+                            <span class="result-label">ROI за год</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline & Expectations -->
+    <section class="timeline-section">
+        <div class="container">
+            <h2>Честно о сроках: когда ждать результат?</h2>
+            <div class="timeline-grid">
+                <div class="timeline-card">
+                    <div class="timeline-period">1-2 месяц</div>
+                    <h3>Аудит и подготовка</h3>
+                    <p>Технический аудит, сбор семантики, анализ конкурентов, план работ. Видимых изменений еще нет, но фундамент заложен.</p>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-period">3-4 месяц</div>
+                    <h3>Первые результаты</h3>
+                    <p>Рост трафика на 20-40%, первые заявки из поиска. Начинаем видеть, какие запросы работают, какие — нет.</p>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-period">5-6 месяц</div>
+                    <h3>Стабильный рост</h3>
+                    <p>Трафик вырос в 2-3 раза, стоимость лида из SEO ниже контекста на 30-50%. Проект выходит на окупаемость.</p>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-period">7-12 месяц</div>
+                    <h3>Масштабирование</h3>
+                    <p>SEO становится основным каналом привлечения. ROI 200-400%. Можно снижать бюджет на контекст.</p>
+                </div>
+            </div>
+            <p class="timeline-note">⚠️ Если вам обещают топ через 1-2 месяца — вас обманывают. Быстрый результат возможен только с черными методами, после которых сайт попадет под санкции.</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2>Честные ответы на неудобные вопросы</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>Сколько стоит SEO продвижение?</h3>
+                    <p>От 60 000 руб./мес для небольших проектов, от 150 000 руб./мес для конкурентных ниш. Точная сумма после аудита. Важно: SEO — это инвестиция с отложенным результатом, а не быстрые продажи.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Можно ли ускорить результат?</h3>
+                    <p>Частично — да. Если сайт технически исправен и есть бюджет на контент и ссылки. Но чудес не бывает: алгоритмам нужно время на индексацию и оценку изменений.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Что если SEO не окупится?</h3>
+                    <p>Такое возможно в узких нишах или при очень высокой конкуренции. После аудита мы скажем прогноз по трафику и экономике. Если видим риски — предложим альтернативы (контекст, маркетплейсы).</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Нужен ли новый сайт для SEO?</h3>
+                    <p>Не всегда. 70% сайтов можно продвигать после доработок.但如果 CMS устарела или структура критически плоха — порекомендуем разработку нового. Честно скажем после аудита.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="consultation">
+        <div class="container">
+            <h2>Получите бесплатный SEO-аудит вашего сайта</h2>
+            <p>За 30 минут разберем и скажем честно:</p>
+            <ul class="cta-benefits">
+                <li>✅ Есть ли потенциал для роста из поиска</li>
+                <li>✅ Какие ошибки мешают сайту ранжироваться</li>
+                <li>✅ Прогноз по трафику и стоимости лида</li>
+                <li>✅ Стоит ли вкладываться в SEO в вашем случае</li>
+            </ul>
+            <form class="cta-form" onsubmit="submitConsultation(event)">
+                <div class="form-row">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" placeholder="Телефон" required>
+                    <input type="url" placeholder="Адрес сайта" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large">Заказать аудит</button>
+                <p class="form-note">Никаких звонков с продажами. Только конкретика по вашему проекту.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">AdAgency</div>
+                <div class="footer-links">
+                    <a href="index.html">Главная</a>
+                    <a href="context.html">Контекстная реклама</a>
+                    <a href="seo.html">SEO продвижение</a>
+                    <a href="development.html">Разработка сайтов</a>
+                </div>
+                <div class="footer-contact">
+                    <p>📞 +7 (999) 000-00-00</p>
+                    <p>✉️ hello@adagency.ru</p>
+                </div>
+            </div>
+            <p class="copyright">© 2024 AdAgency. Честный маркетинг для бизнеса.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Lead Magnet -->
+    <div id="modal-lead-magnet-seo" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('lead-magnet-seo')">&times;</span>
+            <h2>🎁 Ваш подарок: Гайд "Почему позиции ≠ деньги"</h2>
+            <p>24 страницы практической информации:</p>
+            <ul>
+                <li>Как подобрать запросы, которые продают</li>
+                <li>5 метрик важнее позиций</li>
+                <li>Формула расчета ROI от SEO</li>
+                <li>Чек-лист: 12 признаков убыточного SEO</li>
+            </ul>
+            <form onsubmit="downloadLeadMagnet(event, 'seo-guide')">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="tel" placeholder="Телефон" required>
+                <input type="email" placeholder="Email" required>
+                <button type="submit" class="btn btn-primary btn-full">Получить гайд</button>
+                <p class="form-note">Отправим PDF в WhatsApp и на почту в течение 5 минут</p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
