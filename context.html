@@ -3,69 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контекстная реклама | Настройка Яндекс.Директ и Google Ads</title>
-    <meta name="description" content="Настройка контекстной рекламы с оплатой за результат. Аудит сайта перед запуском. Прозрачная отчетность.">
+    <title>Контекстная реклама | Приводим заявки, а не клики</title>
+    <meta name="description" content="Настройка контекстной рекламы с фокусом на заявки, а не клики. Аудит сайта перед запуском. Прозрачная отчетность по ROI.">
+    <meta name="keywords" content="контекстная реклама, яндекс директ, google ads, настройка рекламы, лидогенерация">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Контекстная реклама | Приводим заявки, а не клики">
+    <meta property="og:description" content="Настраиваем рекламу так, чтобы вы платили за заявки, а не за клики. Честный подход к контексту.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yoursite.com/context.html">
+    <meta property="og:image" content="assets/og-context.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Preload fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container header-content">
-            <a href="/" class="logo"><span class="logo-icon">📈</span><span class="logo-text">LeadGenerator</span></a>
-            <nav class="nav" id="mainNav">
-                <a href="/#services" class="nav-link">Услуги</a>
-                <a href="/#cases" class="nav-link">Кейсы</a>
-                <a href="/#contact" class="nav-link nav-cta">Бесплатный аудит</a>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">DigitalPro</span>
+            </a>
+            
+            <nav class="nav" id="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="context.html" class="nav-link nav-link--active">Контекстная реклама</a>
+                <a href="seo.html" class="nav-link">SEO продвижение</a>
+                <a href="development.html" class="nav-link">Разработка сайтов</a>
+                <a href="#cases" class="nav-link">Кейсы</a>
+                <a href="#contact" class="nav-link">Контакты</a>
             </nav>
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Меню"><span></span><span></span><span></span></button>
+            
+            <button class="btn btn-small btn-primary header-cta" onclick="openModal('calculator')">
+                Калькулятор лида
+            </button>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
-    <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-badge">Первая заявка через 3-7 дней</div>
-            <h1 class="hero-title">Контекстная реклама, которая <span class="highlight">окупается</span></h1>
-            <p class="hero-subtitle">Настраиваем Яндекс.Директ и Google Ads так, чтобы вы платили за заявки, а не за клики.</p>
-            <div class="hero-buttons">
-                <a href="#calculator" class="btn btn-primary btn-large">Рассчитать стоимость лида</a>
-                <a href="#cases" class="btn btn-secondary btn-large">Смотреть кейсы</a>
-            </div>
-        </div>
-    </section>
-    <section class="pain-points">
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-menu-link">Главная</a>
+        <a href="context.html" class="mobile-menu-link mobile-menu-link--active">Контекстная реклама</a>
+        <a href="seo.html" class="mobile-menu-link">SEO продвижение</a>
+        <a href="development.html" class="mobile-menu-link">Разработка сайтов</a>
+        <a href="#cases" class="mobile-menu-link">Кейсы</a>
+        <a href="#contact" class="mobile-menu-link">Контакты</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero hero--context">
         <div class="container">
-            <h2 class="section-title">Почему сливают бюджет?</h2>
-            <p class="section-subtitle">Типичные ошибки при настройке</p>
-            <div class="pain-grid">
-                <div class="pain-card"><div class="pain-icon">❌</div><h3>Запуск без аудита сайта</h3><p>Реклама ведет на сайт с низкой конверсией.</p></div>
-                <div class="pain-card"><div class="pain-icon">❌</div><h3>Неправильные ключи</h3><p>Тратят бюджет на информационные запросы.</p></div>
-                <div class="pain-card"><div class="pain-icon">❌</div><h3>Нет минус-слов</h3><p>Показы по нерелевантным запросам.</p></div>
-                <div class="pain-card"><div class="pain-icon">❌</div><h3>Отсутствие аналитики</h3><p>Непонятно какие кампании работают.</p></div>
-            </div>
-        </div>
-    </section>
-    <section id="calculator" class="services">
-        <div class="container">
-            <h2 class="section-title">Калькулятор стоимости лида</h2>
-            <p class="section-subtitle">Узнайте стоимость заявки в вашей нише</p>
-            <div class="contact-container">
-                <div class="contact-content">
-                    <ul class="contact-benefits">
-                        <li>✅ Средняя цена клика в тематике</li>
-                        <li>✅ Конверсия сайта (CR)</li>
-                        <li>✅ Необходимый бюджет для теста</li>
-                        <li>✅ Прогноз заявок в месяц</li>
-                    </ul>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Контекстная реклама:<br>
+                    <span class="highlight">Приводим заявки, а не клики</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Настраиваем Яндекс.Директ и Google Ads так, чтобы вы платили за результат. 
+                    Сначала аудит сайта, потом настройка рекламы. Честно о бюджетах и прогнозах.
+                </p>
+                
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <span class="hero-feature-icon">✓</span>
+                        <span>Аудит сайта перед запуском</span>
+                    </div>
+                    <div class="hero-feature">
+                        <span class="hero-feature-icon">✓</span>
+                        <span>Прозрачная отчетность по ROI</span>
+                    </div>
+                    <div class="hero-feature">
+                        <span class="hero-feature-icon">✓</span>
+                        <span>Первая заявка через 3-7 дней</span>
+                    </div>
                 </div>
-                <form class="contact-form" id="calculatorForm">
-                    <div class="form-group"><label for="niche">Ниша бизнеса</label><select id="niche" name="niche" required style="width:100%;padding:var(--space-md);border:2px solid var(--border);border-radius:var(--radius-md);"><option value="">Выберите нишу</option><option value="construction">Строительство</option><option value="furniture">Мебель</option><option value="education">Образование</option><option value="medicine">Медицина</option><option value="other">Другое</option></select></div>
-                    <div class="form-group"><label for="budget">Бюджет в месяц, ₽</label><input type="number" id="budget" name="budget" placeholder="50000" min="10000" step="5000" required></div>
-                    <div class="form-group"><label for="calcPhone">Телефон</label><input type="tel" id="calcPhone" name="phone" placeholder="+7 (999) 000-00-00" required></div>
-                    <div class="form-group"><label for="calcEmail">Email</label><input type="email" id="calcEmail" name="email" placeholder="ivan@company.ru" required></div>
-                    <button type="submit" class="btn btn-primary btn-full btn-large">Рассчитать стоимость лида</button>
-                    <p class="form-disclaimer">Отправим расчет в течение 24 часов.</p>
-                </form>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-large btn-primary" onclick="openModal('calculator')">
+                        🧮 Калькулятор стоимости лида
+                    </button>
+                    <button class="btn btn-large btn-outline" onclick="openModal('consultation')">
+                        Заказать бесплатный аудит
+                    </button>
+                </div>
+                
+                <p class="hero-note">
+                    ⏱️ Аудит займет 15 минут. Никаких продаж — только цифры и факты.
+                </p>
+            </div>
+            
+            <div class="hero-image">
+                <div class="hero-card">
+                    <div class="hero-card-header">
+                        <span class="hero-card-icon">🎯</span>
+                        <span class="hero-card-title">Результаты за месяц</span>
+                    </div>
+                    <div class="hero-card-metrics">
+                        <div class="metric-item">
+                            <span class="metric-value">85</span>
+                            <span class="metric-label">Заявок</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value">1 765 ₽</span>
+                            <span class="metric-label">CPL</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value">240%</span>
+                            <span class="metric-label">ROI</span>
+                        </div>
+                    </div>
+                    <div class="hero-card-chart">
+                        <div class="chart-bar" style="height: 40%"></div>
+                        <div class="chart-bar" style="height: 55%"></div>
+                        <div class="chart-bar" style="height: 70%"></div>
+                        <div class="chart-bar chart-bar--highlight" style="height: 100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="problems">
+        <div class="container">
+            <h2 class="section-title">Почему 80% бюджетов на контекст сливают впустую?</h2>
+            
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3 class="problem-title">Запуск без аудита сайта</h3>
+                    <p class="problem-text">
+                        Реклама ведет на сайт с конверсией 0.5%. 
+                        Клики есть, заявок нет. Бюджет ушел в никуда.
+                    </p>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3 class="problem-title">Неправильные ключи</h3>
+                    <p class="problem-text">
+                        Показываются по информационным запросам («как выбрать», «бесплатно»). 
+                        Эти люди не готовы покупать.
+                    </p>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3 class="problem-title">Нет минус-слов</h3>
+                    <p class="problem-text">
+                        Показы по нерелевантным запросам. 
+                        Платите за клики от студентов и конкурентов.
+                    </p>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3 class="problem-title">Отсутствие аналитики</h3>
+                    <p class="problem-text">
+                        Не настроены цели в Метрике. 
+                        Непонятно, какие кампании работают, а какие сливают бюджет.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="problems-solution">
+                <h3 class="solution-title">Наш подход: честно и прозрачно</h3>
+                <div class="solution-steps">
+                    <div class="solution-step">
+                        <span class="step-number">1</span>
+                        <p><strong>Аудит сайта:</strong> Проверяем конверсию, юзабилити, готовность к трафику</p>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-number">2</span>
+                        <p><strong>Сбор семантики:</strong> Только коммерческие запросы с высоким intent</p>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-number">3</span>
+                        <p><strong>Настройка:</strong> Разделение кампаний, минус-слова, точные ставки</p>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-number">4</span>
+                        <p><strong>Аналитика:</strong> Настройка целей, сквозная аналитика, отчетность по ROI</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Magnet Section -->
+    <section class="lead-magnet lead-magnet--context">
+        <div class="container">
+            <div class="lead-magnet-content">
+                <div class="lead-magnet-text">
+                    <h2 class="lead-magnet-title">
+                        🧮 Калькулятор стоимости лида
+                    </h2>
+                    <p class="lead-magnet-description">
+                        Рассчитайте прогнозную стоимость заявки в вашей нише. 
+                        Узнайте средний CPC, конверсию и необходимый бюджет для теста.
+                    </p>
+                    
+                    <ul class="lead-magnet-list">
+                        <li>✅ Средняя цена клика в тематике</li>
+                        <li>✅ Конверсия сайта (CR) по отрасли</li>
+                        <li>✅ Прогноз количества заявок</li>
+                        <li>✅ Рекомендуемый бюджет для старта</li>
+                    </ul>
+                    
+                    <button class="btn btn-large btn-primary" onclick="openModal('calculator')">
+                        Рассчитать стоимость лида
+                    </button>
+                    
+                    <p class="lead-magnet-note">
+                        🔒 Расчет придет на email через 5 минут. Без спама.
+                    </p>
+                </div>
+                
+                <div class="lead-magnet-image">
+                    <div class="calculator-mockup">
+                        <div class="calc-screen">
+                            <div class="calc-row">
+                                <span>Бюджет:</span>
+                                <span class="calc-value">50 000 ₽</span>
+                            </div>
+                            <div class="calc-row">
+                                <span>CPC:</span>
+                                <span class="calc-value">45 ₽</span>
+                            </div>
+                            <div class="calc-row">
+                                <span>CTR:</span>
+                                <span class="calc-value">8.5%</span>
+                            </div>
+                            <div class="calc-row calc-total">
+                                <span>Цена лида:</span>
+                                <span class="calc-total-value">1 200 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

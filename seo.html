@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO продвижение | Позиции ≠ деньги. Приводим клиентов из поиска</title>
+    <meta name="description" content="Честное SEO продвижение: не гонимся за позициями, работаем над трафиком и заявками. Аудит перед стартом. Прозрачная отчетность.">
+    <meta name="keywords" content="seo продвижение, продвижение сайта, seo оптимизация, заказать seo">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="SEO продвижение | Позиции ≠ деньги">
+    <meta property="og:description" content="Работаем над трафиком и заявками, а не просто за позициями. Честный подход к SEO.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yoursite.com/seo.html">
+    <meta property="og:image" content="assets/og-seo.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Preload fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">DigitalPro</span>
+            </a>
+            
+            <nav class="nav" id="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="context.html" class="nav-link">Контекстная реклама</a>
+                <a href="seo.html" class="nav-link nav-link--active">SEO продвижение</a>
+                <a href="development.html" class="nav-link">Разработка сайтов</a>
+                <a href="#cases" class="nav-link">Кейсы</a>
+                <a href="#contact" class="nav-link">Контакты</a>
+            </nav>
+            
+            <button class="btn btn-small btn-primary header-cta" onclick="openModal('consultation')">
+                Бесплатный аудит
+            </button>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-menu-link">Главная</a>
+        <a href="context.html" class="mobile-menu-link">Контекстная реклама</a>
+        <a href="seo.html" class="mobile-menu-link mobile-menu-link--active">SEO продвижение</a>
+        <a href="development.html" class="mobile-menu-link">Разработка сайтов</a>
+        <a href="#cases" class="mobile-menu-link">Кейсы</a>
+        <a href="#contact" class="mobile-menu-link">Контакты</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero hero--seo">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    SEO продвижение:<br>
+                    <span class="highlight">Позиции ≠ деньги</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Работаем над трафиком и заявками, а не просто за позициями в поиске. 
+                    Честный подход: сначала аудит, потом стратегия, затем результат.
+                </p>
+                
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <span class="hero-feature-icon">✓</span>
+                        <span>Трафик, а не позиции</span>
+                    </div>
+                    <div class="hero-feature">
+                        <span class="hero-feature-icon">✓</span>
+                        <span>Прозрачная отчетность</span>
+                    </div>
+                    <div class="hero-feature">
+                        <span class="hero-feature-icon">✓</span>
+                        <span>Оплата за результат</span>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-large btn-primary" onclick="openModal('seo-guide')">
+                        📥 Скачать гайд «Почему позиции ≠ деньги»
+                    </button>
+                    <button class="btn btn-large btn-outline" onclick="openModal('consultation')">
+                        Заказать бесплатный аудит
+                    </button>
+                </div>
+                
+                <p class="hero-note">
+                    ⏱️ Аудит займет 15 минут. Никаких продаж — только факты о вашем сайте.
+                </p>
+            </div>
+            
+            <div class="hero-image">
+                <div class="hero-card">
+                    <div class="hero-card-header">
+                        <span class="hero-card-icon">📊</span>
+                        <span class="hero-card-title">Рост органического трафика</span>
+                    </div>
+                    <div class="hero-card-chart">
+                        <div class="chart-bar" style="height: 30%"></div>
+                        <div class="chart-bar" style="height: 45%"></div>
+                        <div class="chart-bar" style="height: 55%"></div>
+                        <div class="chart-bar" style="height: 70%"></div>
+                        <div class="chart-bar" style="height: 85%"></div>
+                        <div class="chart-bar chart-bar--highlight" style="height: 100%"></div>
+                    </div>
+                    <div class="hero-card-stats">
+                        <div class="stat">
+                            <span class="stat-value">+240%</span>
+                            <span class="stat-label">Трафик за 6 месяцев</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">312</span>
+                            <span class="stat-label">Заявок из поиска</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="problems">
+        <div class="container">
+            <h2 class="section-title">Почему 80% бюджетов на SEO сливают впустую?</h2>
+            
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3 class="problem-title">Гонка за позициями</h3>
+                    <p class="problem-text">
+                        Вам показывают рост позиций по запросам, которые никто не ищет. 
+                        Топ-1 по бесполезному запросу = 0 заявок.
+                    </p>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3 class="problem-title">Отсутствие стратегии</h3>
+                    <p class="problem-text">
+                        Делают всё подряд: покупают ссылки, пишут тексты, но без понимания 
+                        вашей аудитории и бизнес-целей. Результат — хаос.
+                    </p>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3 class="problem-title">Нет связи с продажами</h3>
+                    <p class="problem-text">
+                        Трафик растет, а звонков нет. Сайт не готов к посетителям: 
+                        неудобная навигация, слабые тексты, нет призывов к действию.
+                    </p>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3 class="problem-title">Серые методы</h3>
+                    <p class="problem-text">
+                        Используют накрутки, спамные ссылки, копипаст. 
+                        Временно работает, потом сайт попадает под фильтры поисковиков.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="problems-solution">
+                <h3 class="solution-title">Наш подход: честно и прозрачно</h3>
+                <div class="solution-steps">
+                    <div class="solution-step">
+                        <span class="step-number">1</span>
+                        <p><strong>Аудит:</strong> Проверяем сайт, анализируем конкурентов, считаем потенциал</p>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-number">2</span>
+                        <p><strong>Стратегия:</strong> Подбираем запросы с коммерческим intent, планируем работы</p>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-number">3</span>
+                        <p><strong>Реализация:</strong> Техническая оптимизация, контент, ссылки — только белые методы</p>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-number">4</span>
+                        <p><strong>Отчетность:</strong> Ежемесячно показываем трафик, заявки, ROI — никаких «позиций»</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Magnet Section -->
+    <section class="lead-magnet lead-magnet--seo">
+        <div class="container">
+            <div class="lead-magnet-content">
+                <div class="lead-magnet-text">
+                    <h2 class="lead-magnet-title">
+                        📘 Гайд «Почему позиции ≠ деньги»
+                    </h2>
+                    <p class="lead-magnet-description">
+                        Разбираем 7 ошибок, которые совершают 90% компаний при заказе SEO. 
+                        Показываем на примерах, как считать реальную эффективность продвижения.
+                    </p>
+                    
+                    <ul class="lead-magnet-list">
+                        <li>✅ Как отличить полезный запрос от «пустышки»</li>
+                        <li>✅ Какие метрики реально важны для бизнеса</li>
+                        <li>✅ Чек-лист проверки SEO-подрядчика</li>
+                        <li>✅ Примеры расчетов ROI для разных ниш</li>
+                    </ul>
+                    
+                    <button class="btn btn-large btn-primary" onclick="openModal('seo-guide')">
+                        Получить гайд бесплатно
+                    </button>
+                    
+                    <p class="lead-magnet-note">
+                        🔒 Ваш email в безопасности. Никакого спама.
+                    </p>
+                </div>
+                
+                <div class="lead-magnet-image">
+                    <div class="guide-mockup">
+                        <div class="guide-cover">
+                            <span class="guide-emoji">📘</span>
+                            <h4>Почему позиции<br>≠ деньги</h4>
+                            <p>Гайд по эффективному SEO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cases Section -->
+    <section class="cases" id="cases">
+        <div class="container">
+            <h2 class="section-title">Кейсы с цифрами, а не словами</h2>
+            
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-header">
+                        <span class="case-niche">Интернет-магазин мебели</span>
+                        <span class="case-period">8 месяцев</span>
+                    </div>
+                    
+                    <div class="case-problem">
+                        <strong>Задача:</strong> Увеличить продажи из поиска
+                    </div>
+                    
+                    <div class="case-results">
+                        <div class="result-item">
+                            <span class="result-value">+310%</span>
+                            <span class="result-label">Органический трафик</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-value">187</span>
+                            <span class="result-label">Заявок в месяц</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-value">ROI 340%</span>
+                            <span class="result-label">Окупаемость</span>
+                        </div>
+                    </div>
+                    
+                    <div class="case-actions">
+                        <p><strong>Что сделали:</strong></p>
+                        <ul>
+                            <li>Технический аудит и исправление 47 ошибок</li>
+                            <li>Семантическое ядро: 2 400 коммерческих запросов</li>
+                            <li>Оптимизация 120 страниц каталога</li>
+                            <li>Написание 45 продающих текстов</li>
+                            <li>Белая ссылочная стратегия</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="case-card">
+                    <div class="case-header">
+                        <span class="case-niche">Услуги для бизнеса (B2B)</span>
+                        <span class="case-period">6 месяцев</span>
+                    </div>
+                    
+                    <div class="case-problem">
+                        <strong>Задача:</strong> Привлечь качественных лидов
+                    </div>
+                    
+                    <div class="case-results">
+                        <div class="result-item">
+                            <span class="result-value">+180%</span>
+                            <span class="result-label">Трафик из поиска</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-value">42</span>
+                            <span class="result-label">Заявки в месяц</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-value">₽890</span>
+                            <span class="result-label">Стоимость лида</span>
+                        </div>
+                    </div>
+                    
+                    <div class="case-actions">
+                        <p><strong>Что сделали:</strong></p>
+                        <ul>
+                            <li>Анализ ЦА и болей клиентов</li>
+                            <li>Создание 15 посадочных под услуги</li>
+                            <li>Контент-маркетинг: 24 экспертных статьи</li>
+                            <li>Локальное SEO для 3 городов</li>
+                            <li>Интеграция с CRM для трекинга</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cases-cta">
+                <p class="cases-cta-text">Хотите такие же результаты? Начнем с аудита вашего сайта.</p>
+                <button class="btn btn-large btn-primary" onclick="openModal('consultation')">
+                    Заказать бесплатный аудит
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Честные ответы на важные вопросы</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Когда будут первые результаты?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Первые изменения в трафике видны через 2-3 месяца. Стабильный рост начинается с 4-5 месяца. SEO — это марафон, а не спринт. Если обещают результат через 2 недели — вас обманывают.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Сколько стоит SEO продвижение?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>От 40 000 ₽/мес для небольших проектов до 150 000+ ₽/мес для конкурентных ниш. Точная цена после аудита — без понимания объема работ называть цифры нечестно.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Гарантируете ли вы топ-1?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Нет, и любой кто гарантирует — лукавит. Поисковые алгоритмы меняются, конкуренты работают. Мы гарантируем рост качественного трафика и заявок, а не позиции ради позиций.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Что если у нас молодой сайт?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Это нормально. Для молодых сайтов делаем упор на техническую оптимизацию и качественный контент. Первые 3-4 месяца — фундамент, потом начинается рост. Главное — не пытаться обмануть алгоритмы.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Как вы считаете эффективность?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>По трем метрикам: рост органического трафика, количество заявок/звонков, ROI (окупаемость). Настраиваем сквозную аналитику, чтобы видеть путь клиента от поиска до покупки.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="contact-title">Начнем с честного разговора</h2>
+                <p class="contact-subtitle">
+                    15-минутная консультация: разберем ваш сайт, подскажем точки роста, 
+                    честно скажем о перспективах. Никаких продаж — только польза.
+                </p>
+                
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event, 'consultation')">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Ваше имя</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Иван Петров" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Телефон</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+7 (999) 000-00-00" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="site" class="form-label">Сайт (если есть)</label>
+                            <input type="url" id="site" name="site" class="form-input" placeholder="https://mysite.ru">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Комментарий</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Расскажите о проекте..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-large btn-primary btn-full">
+                            Записаться на консультацию
+                        </button>
+                        
+                        <p class="form-note">
+                            🔒 Ваши данные в безопасности. Не передаем третьим лицам.
+                        </p>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="info-item">
+                        <span class="info-icon">📞</span>
+                        <div>
+                            <strong>Телефон</strong>
+                            <p>+7 (999) 000-00-00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <span class="info-icon">✉️</span>
+                        <div>
+                            <strong>Email</strong>
+                            <p>hello@digitalpro.ru</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <span class="info-icon">💬</span>
+                        <div>
+                            <strong>Мессенджеры</strong>
+                            <p>Telegram, WhatsApp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">🚀</span>
+                        <span class="logo-text">DigitalPro</span>
+                    </a>
+                    <p class="footer-desc">
+                        Честное продвижение бизнеса: контекстная реклама, SEO и разработка сайтов.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Главная</a>
+                    <a href="context.html" class="footer-link">Контекстная реклама</a>
+                    <a href="seo.html" class="footer-link footer-link--active">SEO продвижение</a>
+                    <a href="development.html" class="footer-link">Разработка сайтов</a>
+                </div>
+                
+                <div class="footer-contact">
+                    <p><strong>Контакты:</strong></p>
+                    <p>+7 (999) 000-00-00</p>
+                    <p>hello@digitalpro.ru</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 DigitalPro. Все права защищены.</p>
+                <p class="footer-disclaimer">
+                    Не даем пустых обещаний. Работаем на результат.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal: SEO Guide -->
+    <div class="modal" id="modal-seo-guide">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('seo-guide')">&times;</button>
+            
+            <div class="modal-header">
+                <span class="modal-icon">📘</span>
+                <h3 class="modal-title">Гайд «Почему позиции ≠ деньги»</h3>
+            </div>
+            
+            <p class="modal-text">
+                Оставьте email — отправим гайд в течение 5 минут. 
+                Внутри: разбор ошибок, чек-листы, примеры расчетов.
+            </p>
+            
+            <form class="modal-form" onsubmit="handleLeadSubmit(event, 'seo-guide')">
+                <div class="form-group">
+                    <label for="guide-name" class="form-label">Ваше имя</label>
+                    <input type="text" id="guide-name" name="name" class="form-input" placeholder="Иван" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="guide-email" class="form-label">Email</label>
+                    <input type="email" id="guide-email" name="email" class="form-input" placeholder="ivan@company.ru" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="guide-phone" class="form-label">Телефон (необязательно)</label>
+                    <input type="tel" id="guide-phone" name="phone" class="form-input" placeholder="+7 (___) ___-__-__">
+                </div>
+                
+                <button type="submit" class="btn btn-large btn-primary btn-full">
+                    Получить гайд
+                </button>
+                
+                <p class="form-note">
+                    🔒 Никакого спама. Отписка в один клик.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal: Consultation -->
+    <div class="modal" id="modal-consultation">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('consultation')">&times;</button>
+            
+            <div class="modal-header">
+                <span class="modal-icon">📞</span>
+                <h3 class="modal-title">Бесплатная консультация</h3>
+            </div>
+            
+            <p class="modal-text">
+                15 минут: разберем ваш сайт, подскажем точки роста, 
+                честно оценим перспективы. Никаких продаж.
+            </p>
+            
+            <form class="modal-form" onsubmit="handleLeadSubmit(event, 'consultation')">
+                <div class="form-group">
+                    <label for="consult-name" class="form-label">Ваше имя</label>
+                    <input type="text" id="consult-name" name="name" class="form-input" placeholder="Иван" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="consult-phone" class="form-label">Телефон</label>
+                    <input type="tel" id="consult-phone" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="consult-site" class="form-label">Сайт</label>
+                    <input type="url" id="consult-site" name="site" class="form-input" placeholder="https://mysite.ru">
+                </div>
+                
+                <button type="submit" class="btn btn-large btn-primary btn-full">
+                    Записаться
+                </button>
+                
+                <p class="form-note">
+                    🔒 Перезвоним в течение рабочего дня.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

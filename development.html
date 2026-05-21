@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Разработка сайтов | Конверсионные сайты, которые продают</title>
+    <meta name="description" content="Разрабатываем сайты с фокусом на конверсию: лендинги, корпоративные сайты, интернет-магазины. Проверка перед запуском. А/B тесты.">
+    <meta name="keywords" content="разработка сайтов, создание сайтов, лендинг, интернет-магазин, корпоративный сайт">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Разработка сайтов | Конверсионные сайты, которые продают">
+    <meta property="og:description" content="Сайты с фокусом на конверсию, а не просто «красиво». Прототип, дизайн, разработка, тесты.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yoursite.com/development.html">
+    <meta property="og:image" content="assets/og-dev.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Preload fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">DigitalPro</span>
+            </a>
+            
+            <nav class="nav" id="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="context.html" class="nav-link">Контекстная реклама</a>
+                <a href="seo.html" class="nav-link">SEO продвижение</a>
+                <a href="development.html" class="nav-link nav-link--active">Разработка сайтов</a>
+                <a href="#cases" class="nav-link">Кейсы</a>
+                <a href="#contact" class="nav-link">Контакты</a>
+            </nav>
+            
+            <button class="btn btn-small btn-primary header-cta" onclick="openModal('checklist')">
+                Чек-лист сайта
+            </button>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-menu-link">Главная</a>
+        <a href="context.html" class="mobile-menu-link">Контекстная реклама</a>
+        <a href="seo.html" class="mobile-menu-link">SEO продвижение</a>
+        <a href="development.html" class="mobile-menu-link mobile-menu-link--active">Разработка сайтов</a>
+        <a href="#cases" class="mobile-menu-link">Кейсы</a>
+        <a href="#contact" class="mobile-menu-link">Контакты</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero hero--dev">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Разработка сайтов:<br>
+                    <span class="highlight">Красиво ≠ Продаёт</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Делаем сайты с фокусом на конверсию, а не просто «чтобы было красиво». 
+                    Прототип → Дизайн → Разработка → A/B тесты → Результат.
+                </p>
+                
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <span class="hero-feature-icon">✓</span>
+                        <span>Прототип перед дизайном</span>
+                    </div>
+                    <div class="hero-feature">
+                        <span class="hero-feature-icon">✓</span>
+                        <span>A/B тесты после запуска</span>
+                    </div>
+                    <div class="hero-feature">
+                        <span class="hero-feature-icon">✓</span>
+                        <span>Адаптив под все устройства</span>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-large btn-primary" onclick="openModal('checklist')">
+                        📥 Чек-лист «Готов ли ваш сайт к трафику?»
+                    </button>
+                    <button class="btn btn-large btn-outline" onclick="openModal('consultation')">
+                        Обсудить проект
+                    </button>
+                </div>
+                
+                <p class="hero-note">
+                    ⏱️ Чек-лист придет на email через 2 минуты. 15 пунктов для самопроверки.
+                </p>
+            </div>
+            
+            <div class="hero-image">
+                <div class="device-mockup">
+                    <div class="device-screen">
+                        <div class="screen-header">
+                            <div class="screen-dot"></div>
+                            <div class="screen-dot"></div>
+                            <div class="screen-dot"></div>
+                        </div>
+                        <div class="screen-content">
+                            <div class="mockup-block" style="width: 60%"></div>
+                            <div class="mockup-block" style="width: 80%"></div>
+                            <div class="mockup-block" style="width: 70%"></div>
+                            <div class="mockup-cta"></div>
+                        </div>
+                    </div>
+                    <div class="device-label">Конверсия +127%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="problems">
+        <div class="container">
+            <h2 class="section-title">Почему 70% сайтов не приносят заявок?</h2>
+            
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3 class="problem-title">Дизайн ради дизайна</h3>
+                    <p class="problem-text">
+                        Делают «вау-эффект», но забывают о пользователе. 
+                        Красиво, но непонятно куда кликать и что делать.
+                    </p>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3 class="problem-title">Нет прототипа</h3>
+                    <p class="problem-text">
+                        Сразу рисуют дизайн без продуманной структуры. 
+                        В итоге — логика нарушена, пользователь теряется.
+                    </p>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3 class="problem-title">Слабые тексты</h3>
+                    <p class="problem-text">
+                        Пишут «мы молодая динамично развивающаяся компания». 
+                        Клиенту важно: что получит, сколько стоит, почему вы.
+                    </p>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3 class="problem-title">Нет тестов</h3>
+                    <p class="problem-text">
+                        Запустили и забыли. Не тестируют заголовки, кнопки, формы. 
+                        Конверсия могла быть в 2 раза выше.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="problems-solution">
+                <h3 class="solution-title">Наш процесс: от прототипа до результата</h3>
+                <div class="solution-steps">
+                    <div class="solution-step">
+                        <span class="step-number">1</span>
+                        <p><strong>Анализ:</strong> Изучаем вашу ЦА, конкурентов, строим воронку</p>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-number">2</span>
+                        <p><strong>Прототип:</strong> Продумываем структуру, пути пользователя, CTA</p>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-number">3</span>
+                        <p><strong>Дизайн:</strong> Рисуем на основе прототипа, а не «как красиво»</p>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-number">4</span>
+                        <p><strong>Разработка:</strong> Чистый код, адаптивность, скорость загрузки</p>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-number">5</span>
+                        <p><strong>Тесты:</strong> A/B тесты, аналитика, доработки для роста конверсии</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Magnet Section -->
+    <section class="lead-magnet lead-magnet--dev">
+        <div class="container">
+            <div class="lead-magnet-content">
+                <div class="lead-magnet-text">
+                    <h2 class="lead-magnet-title">
+                        ✅ Чек-лист «Готов ли ваш сайт к трафику?»
+                    </h2>
+                    <p class="lead-magnet-description">
+                        15 пунктов для самопроверки сайта перед запуском рекламы. 
+                        Поможет найти узкие места и понять, что нужно исправить.
+                    </p>
+                    
+                    <ul class="lead-magnet-list">
+                        <li>✅ Структура и навигация</li>
+                        <li>✅ Заголовки и УТП</li>
+                        <li>✅ Формы захвата и CTA</li>
+                        <li>✅ Скорость загрузки</li>
+                        <li>✅ Мобильная версия</li>
+                        <li>✅ Аналитика и метрики</li>
+                    </ul>
+                    
+                    <button class="btn btn-large btn-primary" onclick="openModal('checklist')">
+                        Получить чек-лист бесплатно
+                    </button>
+                    
+                    <p class="lead-magnet-note">
+                        🔒 Ваш email в безопасности. Никакого спама.
+                    </p>
+                </div>
+                
+                <div class="lead-magnet-image">
+                    <div class="checklist-mockup">
+                        <div class="checklist-paper">
+                            <div class="checklist-item checked">
+                                <span class="checkmark">✓</span>
+                                <span>Прототип готов</span>
+                            </div>
+                            <div class="checklist-item checked">
+                                <span class="checkmark">✓</span>
+                                <span>Адаптив проверен</span>
+                            </div>
+                            <div class="checklist-item checked">
+                                <span class="checkmark">✓</span>
+                                <span>Формы работают</span>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="checkmark empty">○</span>
+                                <span>A/B тесты</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services services--dev">
+        <div class="container">
+            <h2 class="section-title">Что разрабатываем</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📄</div>
+                    <h3 class="service-title">Лендинги</h3>
+                    <p class="service-desc">
+                        Одностраничники для быстрого старта продаж. 
+                        Фокус на одном действии: заявка, звонок, покупка.
+                    </p>
+                    <ul class="service-list">
+                        <li>Прототип за 2 дня</li>
+                        <li>Дизайн за 3-5 дней</li>
+                        <li>Разработка за 5-7 дней</li>
+                        <li>A/B тесты после запуска</li>
+                    </ul>
+                    <div class="service-price">
+                        от 45 000 ₽
+                    </div>
+                    <button class="btn btn-small btn-outline" onclick="openModal('consultation')">
+                        Заказать
+                    </button>
+                </div>
+                
+                <div class="service-card service-card--featured">
+                    <div class="service-badge">Популярное</div>
+                    <div class="service-icon">🏢</div>
+                    <h3 class="service-title">Корпоративные сайты</h3>
+                    <p class="service-desc">
+                        Многостраничные сайты для компаний. 
+                        Каталог услуг, блог, новости, форма обратной связи.
+                    </p>
+                    <ul class="service-list">
+                        <li>Анализ структуры (1 неделя)</li>
+                        <li>Прототип всех страниц</li>
+                        <li>Дизайн-система</li>
+                        <li>CMS для самостоятельного редактирования</li>
+                    </ul>
+                    <div class="service-price">
+                        от 90 000 ₽
+                    </div>
+                    <button class="btn btn-small btn-primary" onclick="openModal('consultation')">
+                        Заказать
+                    </button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🛒</div>
+                    <h3 class="service-title">Интернет-магазины</h3>
+                    <p class="service-desc">
+                        Полноценные магазины с корзиной, оплатой, интеграцией. 
+                        Удобный каталог, фильтры, личный кабинет.
+                    </p>
+                    <ul class="service-list">
+                        <li>Каталог товаров</li>
+                        <li>Корзина и оформление</li>
+                        <li>Онлайн-оплата</li>
+                        <li>Интеграция с 1C / CRM</li>
+                    </ul>
+                    <div class="service-price">
+                        от 150 000 ₽
+                    </div>
+                    <button class="btn btn-small btn-outline" onclick="openModal('consultation')">
+                        Заказать
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cases Section -->
+    <section class="cases" id="cases">
+        <div class="container">
+            <h2 class="section-title">Кейсы с цифрами конверсии</h2>
+            
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-header">
+                        <span class="case-niche">Лендинг для клиники эстетики</span>
+                        <span class="case-period">Запуск + 2 месяца тестов</span>
+                    </div>
+                    
+                    <div class="case-problem">
+                        <strong>Задача:</strong> Увеличить количество записей на консультацию
+                    </div>
+                    
+                    <div class="case-results">
+                        <div class="result-item">
+                            <span class="result-value">CR 3.2% → 8.5%</span>
+                            <span class="result-label">Конверсия выросла</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-value">+167%</span>
+                            <span class="result-label">Заявок в месяц</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-value">₽1 200</span>
+                            <span class="result-label">Стоимость заявки</span>
+                        </div>
+                    </div>
+                    
+                    <div class="case-actions">
+                        <p><strong>Что сделали:</strong></p>
+                        <ul>
+                            <li>Переработали структуру: убрали лишнее, усилили CTA</li>
+                            <li>Написали новые тексты с акцентом на результат</li>
+                            <li>Добавили блок с отзывами и фото «до/после»</li>
+                            <li>Упростили форму: 3 поля вместо 7</li>
+                            <li>Провели 5 A/B тестов заголовков и кнопок</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="case-card">
+                    <div class="case-header">
+                        <span class="case-niche">Интернет-магазин стройматериалов</span>
+                        <span class="case-period">4 месяца разработки</span>
+                    </div>
+                    
+                    <div class="case-problem">
+                        <strong>Задача:</strong> Запустить онлайн-продажи с нуля
+                    </div>
+                    
+                    <div class="case-results">
+                        <div class="result-item">
+                            <span class="result-value">2 400+</span>
+                            <span class="result-label">Товаров в каталоге</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-value">CR 4.7%</span>
+                            <span class="result-label">В корзину</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-value">₽2.1 млн</span>
+                            <span class="result-label">Выручка за 3 мес</span>
+                        </div>
+                    </div>
+                    
+                    <div class="case-actions">
+                        <p><strong>Что сделали:</strong></p>
+                        <ul>
+                            <li>Продумали структуру каталога и фильтры</li>
+                            <li>Сделали удобный конструктор для сложных товаров</li>
+                            <li>Интегрировали оплату и доставку</li>
+                            <li>Настроили выгрузку в Яндекс.Маркет</li>
+                            <li>Подключили CRM для обработки заказов</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cases-cta">
+                <p class="cases-cta-text">Нужен сайт, который будет продавать? Начнем с прототипа.</p>
+                <button class="btn btn-large btn-primary" onclick="openModal('consultation')">
+                    Обсудить проект
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Честные ответы на важные вопросы</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Сколько времени занимает разработка?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Лендинг: 10-14 дней. Корпоративный сайт: 4-6 недель. Интернет-магазин: 6-10 недель. Срок зависит от сложности и количества правок. Быстрее ≠ лучше, мы не экономим на качестве.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Сколько стоит разработка сайта?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Лендинг от 45 000 ₽, корпоративный от 90 000 ₽, магазин от 150 000 ₽. Точная цена после обсуждения задачи — без понимания объема называть цифры нечестно.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Вы делаете только дизайн или всё под ключ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Работаем под ключ: анализ → прототип → дизайн → верстка → программирование → запуск → тесты. Можно заказать отдельные этапы, но полный цикл дает лучший результат.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Смогу ли я сам редактировать контент?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Да, устанавливаем удобную CMS (WordPress, Tilda, Bitrix — подберем под задачу). После запуска проводим обучение, даем инструкции. Простые правки сможете делать сами.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Что если мне не понравится дизайн?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Сначала делаем прототип — утверждаем структуру. Потом дизайн-концепцию (2-3 варианта). Правки вносим на каждом этапе. Если совсем не попадем — вернем предоплату за этап. Такое ещё не случалось.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="contact-title">Обсудим ваш проект?</h2>
+                <p class="contact-subtitle">
+                    30-минутная встреча: обсудим задачу, покажем примеры, 
+                    рассчитаем сроки и стоимость. Никакого давления — только факты.
+                </p>
+                
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event, 'consultation')">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Ваше имя</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Иван Петров" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Телефон</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+7 (999) 000-00-00" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="site" class="form-label">Сайт (если есть)</label>
+                            <input type="url" id="site" name="site" class="form-input" placeholder="https://mysite.ru">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">О проекте</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Какой сайт нужен? Какие цели?..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-large btn-primary btn-full">
+                            Записаться на встречу
+                        </button>
+                        
+                        <p class="form-note">
+                            🔒 Ваши данные в безопасности. Не передаем третьим лицам.
+                        </p>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="info-item">
+                        <span class="info-icon">📞</span>
+                        <div>
+                            <strong>Телефон</strong>
+                            <p>+7 (999) 000-00-00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <span class="info-icon">✉️</span>
+                        <div>
+                            <strong>Email</strong>
+                            <p>hello@digitalpro.ru</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <span class="info-icon">💬</span>
+                        <div>
+                            <strong>Мессенджеры</strong>
+                            <p>Telegram, WhatsApp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">🚀</span>
+                        <span class="logo-text">DigitalPro</span>
+                    </a>
+                    <p class="footer-desc">
+                        Честное продвижение бизнеса: контекстная реклама, SEO и разработка сайтов.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Главная</a>
+                    <a href="context.html" class="footer-link">Контекстная реклама</a>
+                    <a href="seo.html" class="footer-link">SEO продвижение</a>
+                    <a href="development.html" class="footer-link footer-link--active">Разработка сайтов</a>
+                </div>
+                
+                <div class="footer-contact">
+                    <p><strong>Контакты:</strong></p>
+                    <p>+7 (999) 000-00-00</p>
+                    <p>hello@digitalpro.ru</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 DigitalPro. Все права защищены.</p>
+                <p class="footer-disclaimer">
+                    Не даем пустых обещаний. Работаем на результат.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal: Checklist -->
+    <div class="modal" id="modal-checklist">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('checklist')">&times;</button>
+            
+            <div class="modal-header">
+                <span class="modal-icon">✅</span>
+                <h3 class="modal-title">Чек-лист «Готов ли ваш сайт к трафику?»</h3>
+            </div>
+            
+            <p class="modal-text">
+                Оставьте email — отправим чек-лист в течение 2 минут. 
+                15 пунктов для самопроверки перед запуском рекламы.
+            </p>
+            
+            <form class="modal-form" onsubmit="handleLeadSubmit(event, 'checklist')">
+                <div class="form-group">
+                    <label for="checklist-name" class="form-label">Ваше имя</label>
+                    <input type="text" id="checklist-name" name="name" class="form-input" placeholder="Иван" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="checklist-email" class="form-label">Email</label>
+                    <input type="email" id="checklist-email" name="email" class="form-input" placeholder="ivan@company.ru" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="checklist-phone" class="form-label">Телефон (необязательно)</label>
+                    <input type="tel" id="checklist-phone" name="phone" class="form-input" placeholder="+7 (___) ___-__-__">
+                </div>
+                
+                <button type="submit" class="btn btn-large btn-primary btn-full">
+                    Получить чек-лист
+                </button>
+                
+                <p class="form-note">
+                    🔒 Никакого спама. Отписка в один клик.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal: Consultation -->
+    <div class="modal" id="modal-consultation">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('consultation')">&times;</button>
+            
+            <div class="modal-header">
+                <span class="modal-icon">💬</span>
+                <h3 class="modal-title">Обсудить проект</h3>
+            </div>
+            
+            <p class="modal-text">
+                30 минут: обсудим задачу, покажем примеры, 
+                рассчитаем сроки и стоимость. Без давления.
+            </p>
+            
+            <form class="modal-form" onsubmit="handleLeadSubmit(event, 'consultation')">
+                <div class="form-group">
+                    <label for="consult-name" class="form-label">Ваше имя</label>
+                    <input type="text" id="consult-name" name="name" class="form-input" placeholder="Иван" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="consult-phone" class="form-label">Телефон</label>
+                    <input type="tel" id="consult-phone" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="consult-site" class="form-label">Сайт (если есть)</label>
+                    <input type="url" id="consult-site" name="site" class="form-input" placeholder="https://mysite.ru">
+                </div>
+                
+                <button type="submit" class="btn btn-large btn-primary btn-full">
+                    Записаться
+                </button>
+                
+                <p class="form-note">
+                    🔒 Перезвоним в течение рабочего дня.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
