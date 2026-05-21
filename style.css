@@ -349,7 +349,7 @@ input, textarea, select {
 }
 
 .hero-title {
-    font-size: var(--font-size-5xl);
+    font-size: var(--font-size-4xl);
     font-weight: 800;
     line-height: var(--line-height-tight);
     color: var(--text-dark);
@@ -519,8 +519,9 @@ input, textarea, select {
 .hero-trust {
     display: flex;
     justify-content: center;
-    gap: var(--space-2xl);
+    gap: var(--space-xl);
     flex-wrap: wrap;
+    margin-top: var(--space-xl);
 }
 
 .trust-item {
@@ -529,7 +530,7 @@ input, textarea, select {
 
 .trust-number {
     display: block;
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-2xl);
     font-weight: 700;
     color: var(--primary);
     line-height: 1;
@@ -537,9 +538,10 @@ input, textarea, select {
 
 .trust-label {
     display: block;
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
     color: var(--text-light);
-    margin-top: var(--space-xs);
+    margin-top: 4px;
+    max-width: 80px;
 }
 
 /* ========================================
@@ -552,7 +554,7 @@ input, textarea, select {
 
 .pain-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: var(--space-lg);
 }
 
@@ -771,18 +773,20 @@ input, textarea, select {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: var(--space-lg);
 }
 
 .service-card {
     background: var(--bg-white);
     border-radius: var(--radius-xl);
-    padding: var(--space-xl);
+    padding: var(--space-lg);
     box-shadow: var(--shadow-md);
     transition: transform var(--transition-base), box-shadow var(--transition-base);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .service-card:hover {
@@ -834,10 +838,11 @@ input, textarea, select {
 
 .service-lead-magnet {
     background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-    padding: var(--space-md);
+    padding: var(--space-sm);
     border-radius: var(--radius-md);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-md);
     border: 1px solid rgba(37, 99, 235, 0.2);
+    flex-grow: 1;
 }
 
 .service-lead-magnet h4 {
@@ -864,7 +869,7 @@ input, textarea, select {
 
 .cases-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--space-lg);
 }
 
