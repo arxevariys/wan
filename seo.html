@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO продвижение | Позиции ≠ деньги</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">AdAgency</div>
+            <nav class="nav" id="navMenu">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="context.html" class="nav-link">Контекстная реклама</a>
+                <a href="seo.html" class="nav-link active">SEO продвижение</a>
+                <a href="development.html" class="nav-link">Разработка сайтов</a>
+                <a href="index.html#contact" class="nav-link btn-nav">Консультация</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero service-hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">SEO продвижение по коммерческим запросам</h1>
+                <p class="hero-subtitle">Продвигаем только те запросы, которые приносят деньги. ТОП-1 по информационным запросам не нужен — нам важны ваши продажи, а не красивые отчеты.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="openModal('lead-magnet-seo')">Скачать гайд "Почему позиции ≠ деньги"</button>
+                    <button class="btn btn-secondary" onclick="openModal('audit-modal')">Заказать аудит сайта</button>
+                </div>
+                <p class="hero-note">Первые результаты через 2-4 месяца, стабильный поток — через 6-8 месяцев</p>
+            </div>
+            <div class="hero-image">
+                <div class="hero-card">
+                    <div class="hero-stat">
+                        <span class="stat-number">+280%</span>
+                        <span class="stat-label">Средний рост органического трафика за год</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">85%</span>
+                        <span class="stat-label">Запросов в ТОП-3 через 8 месяцев работы</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="problems">
+        <div class="container">
+            <h2 class="section-title">Почему SEO не приносит деньги?</h2>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">📊</div>
+                    <h3>Продвижение по информационным запросам</h3>
+                    <p>Трафик есть, но это люди, которые ищут "как сделать", а не "купить". Заявок нет.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3>Технические ошибки сайта</h3>
+                    <p>Дубли страниц, битые ссылки, медленная загрузка. Поисковики пессимизируют сайт.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">📝</div>
+                    <h3>Контент не для клиентов</h3>
+                    <p>Статьи написаны для роботов, а не для людей. Нет ответов на вопросы покупателей.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🔗</div>
+                    <h3>Неправильная ссылочная стратегия</h3>
+                    <p>Закупка ссылок на биржах без анализа доноров. Риск санкций от поисковиков.</p>
+                </div>
+            </div>
+            <div class="problems-cta">
+                <p><strong>Мы работаем только с коммерческими запросами и фокусируемся на продажах, а не на позициях ради позиций.</strong></p>
+                <button class="btn btn-primary" onclick="openModal('audit-modal')">Получить бесплатный SEO-аудит</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Как мы продвигаем сайты</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>1. Аудит и семантика</h3>
+                    <p>Находим технические ошибки, собираем только коммерческие запросы, анализируем конкурентов в ТОПе.</p>
+                    <ul class="service-benefits">
+                        <li>✅ Технический аудит (200+ параметров)</li>
+                        <li>✅ Сбор коммерческой семантики</li>
+                        <li>✅ Анализ ТОП-10 конкурентов</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>2. Оптимизация сайта</h3>
+                    <p>Исправляем технические ошибки, оптимизируем мета-теги, улучшаем структуру и юзабилити.</p>
+                    <ul class="service-benefits">
+                        <li>✅ Исправление технических ошибок</li>
+                        <li>✅ Оптимизация Title, Description, H1-H3</li>
+                        <li>✅ Улучшение структуры сайта</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3>3. Контент и ссылки</h3>
+                    <p>Создаем продающие тексты, наращиваем качественную ссылочную массу, работаем над поведенческими факторами.</p>
+                    <ul class="service-benefits">
+                        <li>✅ Написание коммерческих текстов</li>
+                        <li>✅ Белая закупка ссылок</li>
+                        <li>✅ Работа с поведенческими факторами</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="cases">
+        <div class="container">
+            <h2 class="section-title">Стоимость SEO продвижения</h2>
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-header">
+                        <h3>Старт</h3>
+                        <span class="case-niche">Для локального бизнеса</span>
+                    </div>
+                    <div class="case-results">
+                        <div class="result-item">
+                            <span class="result-label">Срок</span>
+                            <span class="result-value">от 6 месяцев</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Запросов</span>
+                            <span class="result-value">до 100</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Бюджет</span>
+                            <span class="result-value">35 000₽/мес</span>
+                        </div>
+                    </div>
+                    <p class="case-description">Подходит для регионального бизнеса. Включает техническую оптимизацию, работу с 50-100 запросами, базовую ссылочную стратегию.</p>
+                    <button class="btn btn-secondary btn-full" onclick="openModal('audit-modal')">Заказать аудит</button>
+                </div>
+                <div class="case-card">
+                    <div class="case-header">
+                        <h3>Бизнес</h3>
+                        <span class="case-niche">Для растущих компаний</span>
+                    </div>
+                    <div class="case-results">
+                        <div class="result-item">
+                            <span class="result-label">Срок</span>
+                            <span class="result-value">от 8 месяцев</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Запросов</span>
+                            <span class="result-value">до 500</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Бюджет</span>
+                            <span class="result-value">70 000₽/мес</span>
+                        </div>
+                    </div>
+                    <p class="case-description">Комплексное продвижение: полный технический аудит, работа с 300-500 запросами, активная ссылочная стратегия, контент-маркетинг.</p>
+                    <button class="btn btn-primary btn-full" onclick="openModal('audit-modal')">Выбрать</button>
+                </div>
+                <div class="case-card">
+                    <div class="case-header">
+                        <h3>Максимум</h3>
+                        <span class="case-niche">Для федеральных проектов</span>
+                    </div>
+                    <div class="case-results">
+                        <div class="result-item">
+                            <span class="result-label">Срок</span>
+                            <span class="result-value">от 12 месяцев</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Запросов</span>
+                            <span class="result-value">до 2000+</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Бюджет</span>
+                            <span class="result-value">от 150 000₽/мес</span>
+                        </div>
+                    </div>
+                    <p class="case-description">Продвижение в Москве и регионах: полная оптимизация, работа с тысячами запросов, агрессивная ссылочная стратегия, PR-контент.</p>
+                    <button class="btn btn-secondary btn-full" onclick="openModal('audit-modal')">Обсудить</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cases Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Кейсы по SEO продвижению</h2>
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-header">
+                        <h3>Интернет-магазин сантехники</h3>
+                        <span class="case-niche">E-commerce</span>
+                    </div>
+                    <div class="case-results">
+                        <div class="result-item">
+                            <span class="result-label">Трафик</span>
+                            <span class="result-value">1 200 → 8 500</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Заказов из SEO</span>
+                            <span class="result-value">15 → 120/мес</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Срок</span>
+                            <span class="result-value">10 месяцев</span>
+                        </div>
+                    </div>
+                    <p class="case-description">Исправили 200+ технических ошибок, расширили семантику с 300 до 1500 запросов, внедрили контент-маркетинг (блог, обзоры).</p>
+                </div>
+                <div class="case-card">
+                    <div class="case-header">
+                        <h3>Клиника стоматологии</h3>
+                        <span class="case-niche">Медицина</span>
+                    </div>
+                    <div class="case-results">
+                        <div class="result-item">
+                            <span class="result-label">Видимость</span>
+                            <span class="result-value">12% → 68%</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Записей из поиска</span>
+                            <span class="result-value">5 → 45/неделю</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Срок</span>
+                            <span class="result-value">8 месяцев</span>
+                        </div>
+                    </div>
+                    <p class="case-description">Оптимизировали карточки услуг, добавили геозависимые запросы, внедрили онлайн-запись, работали с отзывами.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="problems">
+        <div class="container">
+            <h2 class="section-title">Частые вопросы по SEO</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Почему SEO так долго работает?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Поисковым системам нужно время на индексацию изменений, оценку качества контента и доверия к сайту. Первые результаты обычно через 2-4 месяца, стабильный поток заявок — через 6-8 месяцев. Это инвестиция в долгосрочный канал продаж.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Гарантируете ли вы ТОП-1?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Никто не может гарантировать конкретные позиции — алгоритмы поисковиков постоянно меняются. Мы гарантируем выполнение работ по договору и рост органического трафика по коммерческим запросам. Если кто-то гарантирует ТОП-1 — это повод насторожиться.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Чем SEO лучше контекстной рекламы?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Это не конкурирующие, а дополняющие каналы. Контекст дает быстрый результат, но требует постоянных вложений. SEO — долгий канал, но после выхода в ТОП вы получаете бесплатный трафик. Оптимально использовать оба канала одновременно.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Можно ли продвигаться без бюджета на ссылки?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>В некоторых нишах с низкой конкуренцией — да. Но для большинства коммерческих тематик ссылочная масса критически важна. Мы используем только белые методы: крауд-маркетинг, гостевые публикации, естественное наращивание.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Что будет, если перестать платить за SEO?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Позиции начнут постепенно снижаться через 3-6 месяцев, так как конкуренты продолжают работать, а поисковики обновляют выдачу. Но накопленный эффект (индексация страниц, доверие) сохраняется дольше, чем эффект от контекстной рекламы.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-content">
+                    <h2 class="section-title">Получите бесплатный SEO-аудит сайта</h2>
+                    <p class="contact-subtitle">Проанализируем текущее состояние сайта, найдем ошибки и точки роста.</p>
+                    <ul class="contact-benefits">
+                        <li>✅ Технический аудит (200+ параметров)</li>
+                        <li>✅ Анализ текущих позиций</li>
+                        <li>✅ Оценка потенциала трафика</li>
+                        <li>✅ Рекомендации по оптимизации</li>
+                        <li>✅ Прогноз бюджета и сроков</li>
+                    </ul>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" onsubmit="handleFormSubmit(event, 'seo-audit')">
+                        <div class="form-group">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" id="name" name="name" required placeholder="Иван">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+7 (999) 000-00-00">
+                        </div>
+                        <div class="form-group">
+                            <label for="website">Сайт</label>
+                            <input type="url" id="website" name="website" required placeholder="https://mysite.ru">
+                        </div>
+                        <div class="form-group">
+                            <label for="region">Регион продвижения</label>
+                            <input type="text" id="region" name="region" placeholder="Например: Москва">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Заказать аудит</button>
+                        <p class="form-note">Нажимаю кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <div class="logo">AdAgency</div>
+                <p>Приводим заявки, а не клики</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Главная</a>
+                <a href="context.html">Контекстная реклама</a>
+                <a href="seo.html">SEO продвижение</a>
+                <a href="development.html">Разработка сайтов</a>
+            </div>
+            <div class="footer-contact">
+                <p>📞 +7 (999) 000-00-00</p>
+                <p>✉️ info@adagency.ru</p>
+                <p>📍 Москва, ул. Примерная, 1</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 AdAgency. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lead Magnet SEO Modal -->
+    <div class="modal" id="lead-magnet-seo">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('lead-magnet-seo')">&times;</button>
+            <h3>Гайд "Почему позиции ≠ деньги"</h3>
+            <p>Узнайте, какие запросы действительно приносят прибыль, а какие только тратят бюджет.</p>
+            <ul class="magnet-benefits">
+                <li>✅ Как отличить коммерческие запросы от информационных</li>
+                <li>✅ Почему ТОП-1 по ненужному запросу хуже, чем ТОП-10 по денежному</li>
+                <li>✅ Чек-лист из 10 пунктов для аудита семантики</li>
+                <li>✅ Кейсы: как мы увеличили продажи на 180% без роста трафика</li>
+            </ul>
+            <form class="modal-form" onsubmit="handleFormSubmit(event, 'guide-seo')">
+                <div class="form-group">
+                    <label for="seo-name">Ваше имя</label>
+                    <input type="text" id="seo-name" name="name" required placeholder="Иван">
+                </div>
+                <div class="form-group">
+                    <label for="seo-email">Email</label>
+                    <input type="email" id="seo-email" name="email" required placeholder="ivan@company.ru">
+                </div>
+                <div class="form-group">
+                    <label for="seo-phone">Телефон</label>
+                    <input type="tel" id="seo-phone" name="phone" required placeholder="+7 (999) 000-00-00">
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Скачать гайд</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Audit Modal -->
+    <div class="modal" id="audit-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('audit-modal')">&times;</button>
+            <h3>Заказать бесплатный SEO-аудит</h3>
+            <p>Проанализируем ваш сайт, найдем ошибки и точки роста.</p>
+            <form class="modal-form" onsubmit="handleFormSubmit(event, 'seo-audit')">
+                <div class="form-group">
+                    <label for="audit-name">Ваше имя</label>
+                    <input type="text" id="audit-name" name="name" required placeholder="Иван">
+                </div>
+                <div class="form-group">
+                    <label for="audit-phone">Телефон</label>
+                    <input type="tel" id="audit-phone" name="phone" required placeholder="+7 (999) 000-00-00">
+                </div>
+                <div class="form-group">
+                    <label for="audit-site">Сайт</label>
+                    <input type="url" id="audit-site" name="website" placeholder="https://mysite.ru">
+                </div>
+                <div class="form-group">
+                    <label for="audit-task">Ваша задача</label>
+                    <textarea id="audit-task" name="message" rows="3" placeholder="Нужно продвинуть сайт по..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Заказать аудит</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
