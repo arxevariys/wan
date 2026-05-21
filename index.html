@@ -4,20 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Рекламное агентство | Приводим заявки, а не клики</title>
+    <meta name="description" content="Честное продвижение бизнеса: контекстная реклама, SEO и разработка сайтов. Проверка перед запуском. Оплата за результат. Бесплатный аудит.">
+    <meta name="keywords" content="контекстная реклама, seo продвижение, разработка сайтов, лидогенерация, маркетинговое агентство">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Рекламное агентство | Приводим заявки, а не клики">
+    <meta property="og:description" content="Честное продвижение бизнеса. Проверка сайта перед рекламой. Кейсы с цифрами.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yoursite.com">
+    <meta property="og:image" content="assets/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    
+    <!-- Preload fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="container header-container">
-            <div class="logo">AdAgency</div>
-            <nav class="nav" id="navMenu">
-                <a href="index.html" class="nav-link active">Главная</a>
-                <a href="context.html" class="nav-link">Контекстная реклама</a>
-                <a href="seo.html" class="nav-link">SEO продвижение</a>
-                <a href="development.html" class="nav-link">Разработка сайтов</a>
-                <a href="#contact" class="nav-link btn-nav">Консультация</a>
+        <div class="container header-content">
+            <a href="/" class="logo">
+                <span class="logo-icon">📈</span>
+                <span class="logo-text">LeadGenerator</span>
+            </a>
+            
+            <nav class="nav" id="mainNav">
+                <a href="#services" class="nav-link">Услуги</a>
+                <a href="#cases" class="nav-link">Кейсы</a>
+                <a href="#process" class="nav-link">Как работаем</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contact" class="nav-link nav-cta">Бесплатный аудит</a>
             </nav>
+            
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Меню">
                 <span></span>
                 <span></span>
@@ -28,485 +51,463 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Приводим заявки, а не клики</h1>
-                <p class="hero-subtitle">Честно проверяем ваш сайт перед запуском рекламы. Если сайт не готов к конверсии — скажем прямо и предложим решение.</p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="openModal('lead-magnet-main')">Получить чек-лист готовности</button>
-                    <button class="btn btn-secondary" onclick="scrollToSection('services')">Услуги</button>
-                </div>
-                <p class="hero-note">Без ложных обещаний. Только реальные результаты.</p>
+        <div class="container hero-content">
+            <div class="hero-badge">Честно о рекламе</div>
+            <h1 class="hero-title">Приводим <span class="highlight">заявки</span>, а не клики</h1>
+            <p class="hero-subtitle">
+                Проверим ваш сайт перед запуском рекламы. Если он не готов к конверсии — скажем прямо и предложим решение. 
+                Никаких пустых обещаний и слива бюджета.
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary btn-large">Получить бесплатный аудит</a>
+                <a href="#cases" class="btn btn-secondary btn-large">Смотреть кейсы</a>
             </div>
-            <div class="hero-image">
-                <div class="hero-card">
-                    <div class="hero-stat">
-                        <span class="stat-number">87%</span>
-                        <span class="stat-label">Клиентов получают окупаемость с первого месяца</span>
-                    </div>
-                    <div class="hero-stat">
-                        <span class="stat-number">0₽</span>
-                        <span class="stat-label">За клики, которые не превратились в заявки</span>
-                    </div>
+            
+            <div class="hero-trust">
+                <div class="trust-item">
+                    <span class="trust-number">150+</span>
+                    <span class="trust-label">проектов</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-number">85%</span>
+                    <span class="trust-label">клиентов остаются</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-number">от 3 мес</span>
+                    <span class="trust-label">первый результат</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points -->
+    <section class="pain-points">
+        <div class="container">
+            <h2 class="section-title">Знакомо?</h2>
+            <p class="section-subtitle">Типичные проблемы, с которыми сталкиваются владельцы бизнеса</p>
+            
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <div class="pain-icon">💸</div>
+                    <h3>Слив бюджета</h3>
+                    <p>Реклама работает, клики есть, а заявок нет. Бюджет уходит, а ROI отрицательный.</p>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-icon">🎯</div>
+                    <h3>Не те клиенты</h3>
+                    <p>Звонят «просто спросить», школьники или конкуренты. Нет целевых лидов.</p>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-icon">📉</div>
+                    <h3>Сайт не конвертит</h3>
+                    <p>Трафик идет, но посетители уходят без действий. Сайт не продает.</p>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-icon">🤷</div>
+                    <h3>Нет прозрачности</h3>
+                    <p>Агентства присылают отчеты с красивыми графиками, но непонятно, где деньги.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Problems Section -->
-    <section class="problems">
+    <!-- Services -->
+    <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">Почему 9 из 10 бизнесов сливают бюджет на рекламу?</h2>
-            <div class="problems-grid">
-                <div class="problem-card">
-                    <div class="problem-icon">❌</div>
-                    <h3>Реклама запущена на "сырой" сайт</h3>
-                    <p>Посетители приходят, но не оставляют заявки. Сайт не продает, дизайн устарел, нет доверия.</p>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-icon">💸</div>
-                    <h3>Оплата за клики, а не за результат</h3>
-                    <p>Вы платите за каждый переход, но половина трафика — нецелевая. Бюджет уходит впустую.</p>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-icon">📉</div>
-                    <h3>Нет системы отслеживания</h3>
-                    <p>Непонятно, какая реклама работает, а какая нет. Невозможно оптимизировать бюджет.</p>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-icon">🎯</div>
-                    <h3>Неправильный таргетинг</h3>
-                    <p>Реклама показывается не тем людям. Ключевые слова подобраны без анализа аудитории.</p>
-                </div>
-            </div>
-            <div class="problems-cta">
-                <p><strong>Мы не запускаем рекламу, пока не убедимся, что ваш сайт готов конвертировать трафик в заявки.</strong></p>
-                <button class="btn btn-primary" onclick="openModal('audit-modal')">Заказать бесплатный экспресс-аудит</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-title">Наши услуги: только то, что приносит деньги</h2>
+            <h2 class="section-title">Наши услуги</h2>
+            <p class="section-subtitle">Только то, что приносит реальную прибыль</p>
+            
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🎯</div>
+                <!-- Context Service -->
+                <article class="service-card">
+                    <div class="service-badge">Популярное</div>
+                    <div class="service-icon">🔍</div>
                     <h3>Контекстная реклама</h3>
-                    <p>Настройка Яндекс.Директ и Google Ads с оплатой за заявки, а не за клики.</p>
+                    <p class="service-desc">Яндекс.Директ и Google Ads. Настраиваем так, чтобы каждая копейка работала на заявку.</p>
+                    
                     <ul class="service-benefits">
-                        <li>✅ Проверка сайта перед запуском</li>
-                        <li>✅ Точный подбор ключевых слов</li>
-                        <li>✅ Отслеживание каждой заявки</li>
-                        <li>✅ Оптимизация бюджета ежедневно</li>
+                        <li>✅ Аудит сайта перед запуском</li>
+                        <li>✅ Прозрачная отчетность по лидам</li>
+                        <li>✅ Оптимизация ставок в реальном времени</li>
+                        <li>✅ Минимальная стоимость заявки</li>
                     </ul>
-                    <div class="service-magnet">
-                        <p><strong>Лид-магнит:</strong> Калькулятор стоимости лида</p>
-                        <button class="btn btn-small" onclick="openModal('calculator-modal')">Рассчитать стоимость</button>
+                    
+                    <div class="service-lead-magnet">
+                        <h4>🎁 Полезно знать</h4>
+                        <p>Скачайте калькулятор стоимости лида и узнайте, сколько реально стоит заявка в вашей нише.</p>
+                        <button class="btn btn-outline btn-small open-modal" data-modal="contextModal">Рассчитать стоимость лида</button>
                     </div>
-                    <a href="context.html" class="service-link">Подробнее →</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📈</div>
+                    
+                    <a href="context.html" class="btn btn-primary btn-full">Подробнее об услуге</a>
+                </article>
+
+                <!-- SEO Service -->
+                <article class="service-card">
+                    <div class="service-icon">🌱</div>
                     <h3>SEO продвижение</h3>
-                    <p>Вывод сайта в ТОП поисковых систем по коммерческим запросам.</p>
+                    <p class="service-desc">Выводим в ТОП не ради позиций, а ради денег. Органический трафик, который конвертирует.</p>
+                    
                     <ul class="service-benefits">
-                        <li>✅ Аудит текущего состояния сайта</li>
-                        <li>✅ Работа только с денежными запросами</li>
-                        <li>✅ Прозрачная отчетность по позициям</li>
-                        <li>✅ Гарантия роста органического трафика</li>
+                        <li>✅ Аудит текущих позиций и ошибок</li>
+                        <li>✅ Стратегия под коммерческие запросы</li>
+                        <li>✅ Работа над юзабилити и конверсией</li>
+                        <li>✅ Долгосрочный эффект без доплат за клик</li>
                     </ul>
-                    <div class="service-magnet">
-                        <p><strong>Лид-магнит:</strong> Гайд "Почему позиции ≠ деньги"</p>
-                        <button class="btn btn-small" onclick="openModal('lead-magnet-seo')">Скачать гайд</button>
+                    
+                    <div class="service-lead-magnet">
+                        <h4>🎁 Полезно знать</h4>
+                        <p>Гайд «Почему позиции ≠ деньги»: как избежать типичных ошибок в SEO и не слить бюджет.</p>
+                        <button class="btn btn-outline btn-small open-modal" data-modal="seoModal">Скачать гайд</button>
                     </div>
-                    <a href="seo.html" class="service-link">Подробнее →</a>
-                </div>
-                <div class="service-card">
+                    
+                    <a href="seo.html" class="btn btn-primary btn-full">Подробнее об услуге</a>
+                </article>
+
+                <!-- Development Service -->
+                <article class="service-card">
                     <div class="service-icon">💻</div>
                     <h3>Разработка сайтов</h3>
-                    <p>Создание конверсионных лендингов и интернет-магазинов, которые продают.</p>
+                    <p class="service-desc">Создаем сайты, которые продают. Не просто красиво, а с продуманной воронкой продаж.</p>
+                    
                     <ul class="service-benefits">
-                        <li>✅ Дизайн, который вызывает доверие</li>
-                        <li>✅ Продуманная структура продаж</li>
+                        <li>✅ Анализ ЦА и конкурентов перед стартом</li>
+                        <li>✅ Прототипирование с фокусом на конверсию</li>
                         <li>✅ Интеграция с CRM и аналитикой</li>
-                        <li>✅ Адаптивность под все устройства</li>
+                        <li>✅ Тестирование на реальных пользователях</li>
                     </ul>
-                    <div class="service-magnet">
-                        <p><strong>Лид-магнит:</strong> Чек-лист "Готов ли сайт к трафику?"</p>
-                        <button class="btn btn-small" onclick="openModal('lead-magnet-dev')">Получить чек-лист</button>
+                    
+                    <div class="service-lead-magnet">
+                        <h4>🎁 Полезно знать</h4>
+                        <p>Чек-лист «Готов ли ваш сайт к трафику?»: 15 пунктов, которые проверят эффективность вашего сайта.</p>
+                        <button class="btn btn-outline btn-small open-modal" data-modal="devModal">Скачать чек-лист</button>
                     </div>
-                    <a href="development.html" class="service-link">Подробнее →</a>
-                </div>
+                    
+                    <a href="development.html" class="btn btn-primary btn-full">Подробнее об услуге</a>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Cases Section -->
-    <section class="cases">
+    <!-- Cases -->
+    <section id="cases" class="cases">
         <div class="container">
-            <h2 class="section-title">Реальные кейсы с цифрами</h2>
+            <h2 class="section-title">Кейсы с цифрами</h2>
+            <p class="section-subtitle">Реальные результаты наших клиентов</p>
+            
             <div class="cases-grid">
-                <div class="case-card">
+                <article class="case-card">
                     <div class="case-header">
-                        <h3>Интернет-магазин мебели</h3>
-                        <span class="case-niche">Ниша: мебель</span>
+                        <span class="case-category">Интернет-магазин мебели</span>
+                        <span class="case-result">+240% ROI</span>
                     </div>
-                    <div class="case-results">
-                        <div class="result-item">
-                            <span class="result-label">Стоимость лида</span>
-                            <span class="result-value">340₽ → 180₽</span>
-                        </div>
-                        <div class="result-item">
-                            <span class="result-label">Количество заявок</span>
-                            <span class="result-value">+215% за 3 месяца</span>
-                        </div>
-                        <div class="result-item">
-                            <span class="result-label">ROI</span>
-                            <span class="result-value">340%</span>
-                        </div>
+                    <h3>Контекстная реклама с окупаемостью 240%</h3>
+                    <ul class="case-metrics">
+                        <li><strong>Бюджет:</strong> 150 000 ₽/мес</li>
+                        <li><strong>Заявок:</strong> 85 шт/мес</li>
+                        <li><strong>Стоимость лида:</strong> 1 765 ₽</li>
+                        <li><strong>Средний чек:</strong> 45 000 ₽</li>
+                    </ul>
+                    <p class="case-desc">Провели полный аудит сайта, переупаковали посадочные страницы, настроили сквозную аналитику. Через 2 месяца вышли на окупаемость 240%.</p>
+                    <a href="#contact" class="btn btn-link">Хочу такой же результат →</a>
+                </article>
+
+                <article class="case-card">
+                    <div class="case-header">
+                        <span class="case-category">Строительная компания</span>
+                        <span class="case-result">x3 заявки</span>
                     </div>
-                    <p class="case-description">Провели аудит сайта, переделали структуру карточек товаров, настроили контекстную рекламу с точным таргетингом.</p>
+                    <h3>SEO продвижение: рост заявок в 3 раза</h3>
+                    <ul class="case-metrics">
+                        <li><strong>Было заявок:</strong> 12 шт/мес</li>
+                        <li><strong>Стало заявок:</strong> 36 шт/мес</li>
+                        <li><strong>Позиции ТОП-3:</strong> 45 запросов</li>
+                        <li><strong>Срок:</strong> 6 месяцев</li>
+                    </ul>
+                    <p class="case-desc">Сфокусировались на коммерческих запросах с высокой конверсией. Переработали структуру сайта и контент. Результат — стабильный поток заявок из органики.</p>
+                    <a href="#contact" class="btn btn-link">Хочу такой же результат →</a>
+                </article>
+
+                <article class="case-card">
+                    <div class="case-header">
+                        <span class="case-category">Онлайн-школа</span>
+                        <span class="case-result">CR 8.5%</span>
+                    </div>
+                    <h3>Разработка лендинга с конверсией 8.5%</h3>
+                    <ul class="case-metrics">
+                        <li><strong>Было CR:</strong> 1.2%</li>
+                        <li><strong>Стало CR:</strong> 8.5%</li>
+                        <li><strong>Рост заявок:</strong> +610%</li>
+                        <li><strong>Срок разработки:</strong> 3 недели</li>
+                    </ul>
+                    <p class="case-desc">Полностью переработали структуру, добавили социальные доказательства, упростили форму захвата. Конверсия выросла в 7 раз при том же трафике.</p>
+                    <a href="#contact" class="btn btn-link">Хочу такой же результат →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="process">
+        <div class="container">
+            <h2 class="section-title">Как мы работаем</h2>
+            <p class="section-subtitle">Прозрачный процесс без скрытых этапов</p>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Бесплатный аудит</h3>
+                    <p>Анализируем ваш сайт, текущую рекламу и конкурентов. Честно говорим о перспективах и рисках.</p>
                 </div>
-                <div class="case-card">
-                    <div class="case-header">
-                        <h3>Клиника эстетической медицины</h3>
-                        <span class="case-niche">Ниша: медицина</span>
-                    </div>
-                    <div class="case-results">
-                        <div class="result-item">
-                            <span class="result-label">Стоимость записи</span>
-                            <span class="result-value">890₽ → 420₽</span>
-                        </div>
-                        <div class="result-item">
-                            <span class="result-label">Заполняемость врачей</span>
-                            <span class="result-value">65% → 94%</span>
-                        </div>
-                        <div class="result-item">
-                            <span class="result-label">Выручка</span>
-                            <span class="result-value">+180% за полгода</span>
-                        </div>
-                    </div>
-                    <p class="case-description">Разработали новый лендинг с онлайн-записью, настроили SEO по геозависимым запросам, внедрили сквозную аналитику.</p>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Стратегия и план</h3>
+                    <p>Составляем пошаговый план работ с прогнозом результатов, сроков и бюджета.</p>
                 </div>
-                <div class="case-card">
-                    <div class="case-header">
-                        <h3>Строительная компания</h3>
-                        <span class="case-niche">Ниша: строительство</span>
-                    </div>
-                    <div class="case-results">
-                        <div class="result-item">
-                            <span class="result-label">Стоимость квала</span>
-                            <span class="result-value">2500₽ → 950₽</span>
-                        </div>
-                        <div class="result-item">
-                            <span class="result-label">Количество договоров</span>
-                            <span class="result-value">12 → 31 в месяц</span>
-                        </div>
-                        <div class="result-item">
-                            <span class="result-label">Срок окупаемости</span>
-                            <span class="result-value">2.5 месяца</span>
-                        </div>
-                    </div>
-                    <p class="case-description">Создали сайт с калькулятором стоимости, настроили контекстную рекламу по высокочастотным запросам, внедрили CRM.</p>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Запуск и тесты</h3>
+                    <p>Запускаем рекламу/продвижение, тестируем гипотезы, оптимизируем под максимальную конверсию.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Масштабирование</h3>
+                    <p>Когда находим рабочую связку — увеличиваем бюджет и масштабируем результат.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq">
+    <!-- FAQ -->
+    <section id="faq" class="faq">
         <div class="container">
-            <h2 class="section-title">Честные ответы на важные вопросы</h2>
+            <h2 class="section-title">Частые вопросы</h2>
+            <p class="section-subtitle">Отвечаем честно, без маркетинговой шелухи</p>
+            
             <div class="faq-list">
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>Гарантируете ли вы результат?</span>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Сколько стоит настройка рекламы?</span>
                         <span class="faq-icon">+</span>
-                    </button>
+                    </summary>
                     <div class="faq-answer">
-                        <p>Мы гарантируем выполнение работ по договору: настройку рекламы, оптимизацию сайта, ведение кампаний. Но конкретные цифры (количество заявок, стоимость лида) зависят от множества факторов: качества вашего продукта, цены, конкуренции, сезонности. Мы честно оцениваем перспективы на этапе аудита и беремся только за проекты, где видим реальную возможность результата.</p>
+                        <p>Стоимость зависит от сложности проекта и количества рекламных кампаний. В среднем от 30 000 ₽ за настройку. Но важнее не цена настройки, а окупаемость. Мы берем фикс + % от результата, чтобы быть заинтересованными в вашем успехе.</p>
                     </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
+                </details>
+                
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Какие гарантии вы даете?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Мы не гарантируем конкретное количество заявок, потому что на конверсию влияет много факторов (сайт, продукт, сезонность). Но гарантируем прозрачную отчетность, постоянную оптимизацию и честную обратную связь. Если видим, что реклама не окупится — скажем сразу.</p>
+                    </div>
+                </details>
+                
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Через сколько будет результат?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Контекстная реклама дает первые заявки через 3-7 дней после запуска. SEO — через 3-6 месяцев. Разработка сайта — 2-4 недели. Точные сроки обсудим на аудите после анализа вашей ниши.</p>
+                    </div>
+                </details>
+                
+                <details class="faq-item">
+                    <summary class="faq-question">
                         <span>Что если мой сайт не готов к рекламе?</span>
                         <span class="faq-icon">+</span>
-                    </button>
+                    </summary>
                     <div class="faq-answer">
-                        <p>Мы проведем бесплатный экспресс-аудит и честно скажем, что нужно исправить. Если требуется доработка сайта — предложим разработку или дадим рекомендации. Мы не будем запускать рекламу на сайт, который не конвертирует, потому что это невыгодно ни вам, ни нам.</p>
+                        <p>Мы честно скажем об этом на этапе аудита. Предложим варианты: доработать текущий сайт, сделать новый лендинг или запустить рекламу на другие площадки. Запускать рекламу на неконвертящий сайт — сливать бюджет. Мы этого не делаем.</p>
                     </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>Сколько нужно бюджета на рекламу?</span>
+                </details>
+                
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Работаете ли вы с маленькими бюджетами?</span>
                         <span class="faq-icon">+</span>
-                    </button>
+                    </summary>
                     <div class="faq-answer">
-                        <p>Минимальный рекомендуемый бюджет на тестирование — от 30 000₽ в месяц на рекламные площадки + наша комиссия. Для некоторых ниш (недвижимость, B2B) нужен бюджет от 100 000₽. Точную сумму рассчитаем после анализа вашей ниши и конкурентов.</p>
+                        <p>Да, но с оговорками. Минимальный рекламный бюджет — от 50 000 ₽/мес. Если бюджет меньше, скорее всего, результат будет незаметен. На аудите рассчитаем оптимальный бюджет для вашей ниши и покажем прогноз.</p>
                     </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>Как быстро я получу первые заявки?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Контекстная реклама начинает работать через 3-7 дней после запуска (время на модерацию и первичную оптимизацию). SEO — это долгосрочная стратегия, первые результаты через 2-4 месяца, стабильный поток — через 6-8 месяцев. Разработка сайта занимает от 2 до 8 недель в зависимости от сложности.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>Почему вы отказываете некоторым клиентам?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Мы работаем только с проектами, где видим потенциал. Если ваш продукт неконкурентоспособен, цена завышена, или сайт невозможно доработать до конверсионного — мы честно об этом скажем и порекомендуем сначала решить эти проблемы. Нам важнее репутация, чем разовый заработок.</p>
-                    </div>
-                </div>
+                </details>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-content">
-                    <h2 class="section-title">Бесплатный экспресс-аудит на 15 минут</h2>
-                    <p class="contact-subtitle">Разберем вашу ситуацию, честно скажем о перспективах и подскажем, с чего начать.</p>
-                    <ul class="contact-benefits">
-                        <li>✅ Анализ текущего сайта и рекламы (если есть)</li>
-                        <li>✅ Оценка потенциала в вашей нише</li>
-                        <li>✅ Рекомендации по улучшению конверсии</li>
-                        <li>✅ Расчет ориентировочного бюджета</li>
-                        <li>✅ Никаких продаж в лоб — только польза</li>
-                    </ul>
-                </div>
-                <div class="contact-form-wrapper">
-                    <form class="contact-form" onsubmit="handleFormSubmit(event, 'audit')">
-                        <div class="form-group">
-                            <label for="name">Ваше имя</label>
-                            <input type="text" id="name" name="name" required placeholder="Иван">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Телефон</label>
-                            <input type="tel" id="phone" name="phone" required placeholder="+7 (999) 000-00-00">
-                        </div>
-                        <div class="form-group">
-                            <label for="website">Сайт (если есть)</label>
-                            <input type="url" id="website" name="website" placeholder="https://mysite.ru">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Кратко о задаче</label>
-                            <textarea id="message" name="message" rows="3" placeholder="Нужна контекстная реклама для интернет-магазина"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">Записаться на аудит</button>
-                        <p class="form-note">Нажимаю кнопку, вы соглашаетесь с политикой конфиденциальности</p>
-                    </form>
-                </div>
+    <!-- Contact Form -->
+    <section id="contact" class="contact">
+        <div class="container contact-container">
+            <div class="contact-content">
+                <h2 class="section-title">Получите бесплатный экспресс-аудит</h2>
+                <p class="contact-desc">
+                    Оставьте заявку, и мы проведем бесплатный анализ вашего сайта и текущей рекламы. 
+                    В течение 24 часов пришлем отчет с рекомендациями и точками роста.
+                </p>
+                
+                <ul class="contact-benefits">
+                    <li>✅ Анализ текущего сайта на конверсию</li>
+                    <li>✅ Оценка качества рекламы (если есть)</li>
+                    <li>✅ Сравнение с конкурентами</li>
+                    <li>✅ План действий на 3 месяца</li>
+                    <li>✅ Прогноз бюджета и результатов</li>
+                </ul>
             </div>
+            
+            <form class="contact-form" id="auditForm">
+                <div class="form-group">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" name="name" placeholder="Иван Петров" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+7 (999) 000-00-00" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="ivan@company.ru" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="website">Сайт (если есть)</label>
+                    <input type="url" id="website" name="website" placeholder="https://mysite.ru">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Комментарий</label>
+                    <textarea id="message" name="message" placeholder="Расскажите о вашей задаче..." rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full btn-large">Получить бесплатный аудит</button>
+                
+                <p class="form-disclaimer">
+                    Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности. 
+                    Мы не передаем ваши данные третьим лицам.
+                </p>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-info">
-                <div class="logo">AdAgency</div>
-                <p>Приводим заявки, а не клики</p>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="/" class="logo">
+                    <span class="logo-icon">📈</span>
+                    <span class="logo-text">LeadGenerator</span>
+                </a>
+                <p>Приводим заявки, а не клики. Честно о рекламе.</p>
             </div>
+            
             <div class="footer-links">
-                <a href="index.html">Главная</a>
+                <h4>Услуги</h4>
                 <a href="context.html">Контекстная реклама</a>
                 <a href="seo.html">SEO продвижение</a>
                 <a href="development.html">Разработка сайтов</a>
             </div>
+            
+            <div class="footer-links">
+                <h4>Компания</h4>
+                <a href="#cases">Кейсы</a>
+                <a href="#process">Как работаем</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            
             <div class="footer-contact">
-                <p>📞 +7 (999) 000-00-00</p>
-                <p>✉️ info@adagency.ru</p>
-                <p>📍 Москва, ул. Примерная, 1</p>
+                <h4>Контакты</h4>
+                <a href="tel:+79990000000">+7 (999) 000-00-00</a>
+                <a href="mailto:hello@leadgenerator.ru">hello@leadgenerator.ru</a>
+                <div class="social-links">
+                    <a href="#" aria-label="Telegram">TG</a>
+                    <a href="#" aria-label="WhatsApp">WA</a>
+                    <a href="#" aria-label="VKontakte">VK</a>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2024 AdAgency. Все права защищены.</p>
-            </div>
+        
+        <div class="container footer-bottom">
+            <p>&copy; 2024 LeadGenerator. Все права защищены.</p>
+            <a href="#">Политика конфиденциальности</a>
         </div>
     </footer>
 
     <!-- Modals -->
-    <!-- Lead Magnet Main Modal -->
-    <div class="modal" id="lead-magnet-main">
+    <!-- Context Modal -->
+    <div class="modal" id="contextModal">
+        <div class="modal-overlay"></div>
         <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('lead-magnet-main')">&times;</button>
-            <h3>Получите чек-лист "Готов ли ваш бизнес к рекламе?"</h3>
-            <p>Проверьте 15 критических параметров перед запуском рекламы. Избежите слива бюджета.</p>
-            <form class="modal-form" onsubmit="handleFormSubmit(event, 'checklist-main')">
+            <button class="modal-close" aria-label="Закрыть">&times;</button>
+            <h3>🎁 Калькулятор стоимости лида</h3>
+            <p>Узнайте, сколько реально стоит заявка в вашей нише. Введите email, и мы отправим калькулятор + примеры из вашей отрасли.</p>
+            <form class="modal-form lead-form" data-type="context_calculator">
                 <div class="form-group">
-                    <label for="lm-name">Ваше имя</label>
-                    <input type="text" id="lm-name" name="name" required placeholder="Иван">
+                    <label for="contextName">Ваше имя</label>
+                    <input type="text" id="contextName" name="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="lm-email">Email</label>
-                    <input type="email" id="lm-email" name="email" required placeholder="ivan@company.ru">
+                    <label for="contextEmail">Email</label>
+                    <input type="email" id="contextEmail" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="lm-phone">Телефон</label>
-                    <input type="tel" id="lm-phone" name="phone" required placeholder="+7 (999) 000-00-00">
+                    <label for="contextPhone">Телефон</label>
+                    <input type="tel" id="contextPhone" name="phone" required>
                 </div>
-                <button type="submit" class="btn btn-primary btn-full">Получить чек-лист</button>
+                <button type="submit" class="btn btn-primary btn-full">Получить калькулятор</button>
             </form>
         </div>
     </div>
 
-    <!-- Calculator Modal -->
-    <div class="modal" id="calculator-modal">
-        <div class="modal-content modal-large">
-            <button class="modal-close" onclick="closeModal('calculator-modal')">&times;</button>
-            <h3>Калькулятор стоимости лида</h3>
-            <p>Рассчитайте ориентировочную стоимость заявки в вашей нише</p>
-            <form class="calculator-form" onsubmit="calculateLeadCost(event)">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="calc-niche">Ваша ниша</label>
-                        <select id="calc-niche" name="niche" required>
-                            <option value="">Выберите нишу</option>
-                            <option value="ecommerce">Интернет-магазин</option>
-                            <option value="services">Услуги для населения</option>
-                            <option value="b2b">B2B услуги</option>
-                            <option value="medicine">Медицина</option>
-                            <option value="construction">Строительство</option>
-                            <option value="education">Образование</option>
-                            <option value="other">Другое</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="calc-budget">Планируемый бюджет (₽/мес)</label>
-                        <input type="number" id="calc-budget" name="budget" required placeholder="50000">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="calc-region">Регион продвижения</label>
-                        <select id="calc-region" name="region" required>
-                            <option value="">Выберите регион</option>
-                            <option value="moscow">Москва</option>
-                            <option value="spb">Санкт-Петербург</option>
-                            <option value="million">Город-миллионник</option>
-                            <option value="region">Региональный центр</option>
-                            <option value="small">Малый город</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="calc-conversion">Конверсия сайта (%)</label>
-                        <input type="number" id="calc-conversion" name="conversion" step="0.1" placeholder="2.5" value="2.5">
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary btn-full">Рассчитать</button>
-            </form>
-            <div class="calculator-result" id="calculator-result" style="display: none;">
-                <h4>Результат расчета:</h4>
-                <div class="result-grid">
-                    <div class="result-box">
-                        <span class="result-label">Средняя стоимость клика</span>
-                        <span class="result-value" id="cpc-value">-</span>
-                    </div>
-                    <div class="result-box">
-                        <span class="result-label">Прогноз кликов в месяц</span>
-                        <span class="result-value" id="clicks-value">-</span>
-                    </div>
-                    <div class="result-box">
-                        <span class="result-label">Прогноз заявок</span>
-                        <span class="result-value" id="leads-value">-</span>
-                    </div>
-                    <div class="result-box highlight">
-                        <span class="result-label">Стоимость лида</span>
-                        <span class="result-value" id="cost-per-lead">-</span>
-                    </div>
-                </div>
-                <p class="result-note">* Это ориентировочный расчет. Точные цифры возможны только после анализа вашей ниши и конкурентов.</p>
-                <button class="btn btn-secondary btn-full" onclick="openModal('audit-modal'); closeModal('calculator-modal')">Получить точный расчет</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Lead Magnet SEO Modal -->
-    <div class="modal" id="lead-magnet-seo">
+    <!-- SEO Modal -->
+    <div class="modal" id="seoModal">
+        <div class="modal-overlay"></div>
         <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('lead-magnet-seo')">&times;</button>
-            <h3>Гайд "Почему позиции ≠ деньги"</h3>
-            <p>Узнайте, какие запросы действительно приносят прибыль, а какие только тратят бюджет.</p>
-            <ul class="magnet-benefits">
-                <li>✅ Как отличить коммерческие запросы от информационных</li>
-                <li>✅ Почему ТОП-1 по ненужному запросу хуже, чем ТОП-10 по денежному</li>
-                <li>✅ Чек-лист из 10 пунктов для аудита семантики</li>
-            </ul>
-            <form class="modal-form" onsubmit="handleFormSubmit(event, 'guide-seo')">
+            <button class="modal-close" aria-label="Закрыть">&times;</button>
+            <h3>🎁 Гайд «Почему позиции ≠ деньги»</h3>
+            <p>Узнайте, как избежать типичных ошибок в SEO и не слить бюджет. Введите email, и мы отправим гайд + чек-лист проверки подрядчика.</p>
+            <form class="modal-form lead-form" data-type="seo_guide">
                 <div class="form-group">
-                    <label for="seo-name">Ваше имя</label>
-                    <input type="text" id="seo-name" name="name" required placeholder="Иван">
+                    <label for="seoName">Ваше имя</label>
+                    <input type="text" id="seoName" name="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="seo-email">Email</label>
-                    <input type="email" id="seo-email" name="email" required placeholder="ivan@company.ru">
+                    <label for="seoEmail">Email</label>
+                    <input type="email" id="seoEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="seoPhone">Телефон</label>
+                    <input type="tel" id="seoPhone" name="phone" required>
                 </div>
                 <button type="submit" class="btn btn-primary btn-full">Скачать гайд</button>
             </form>
         </div>
     </div>
 
-    <!-- Lead Magnet Dev Modal -->
-    <div class="modal" id="lead-magnet-dev">
+    <!-- Dev Modal -->
+    <div class="modal" id="devModal">
+        <div class="modal-overlay"></div>
         <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('lead-magnet-dev')">&times;</button>
-            <h3>Чек-лист "Готов ли сайт к трафику?"</h3>
-            <p>Проверьте свой сайт по 20 критическим параметрам перед запуском рекламы.</p>
-            <ul class="magnet-benefits">
-                <li>✅ Скорость загрузки и мобильная адаптивность</li>
-                <li>✅ Юзабилити и путь пользователя</li>
-                <li>✅ Доверительные элементы и социальное доказательство</li>
-                <li>✅ Техническая готовность к аналитике</li>
-            </ul>
-            <form class="modal-form" onsubmit="handleFormSubmit(event, 'checklist-dev')">
+            <button class="modal-close" aria-label="Закрыть">&times;</button>
+            <h3>🎁 Чек-лист «Готов ли сайт к трафику?»</h3>
+            <p>15 пунктов, которые проверят эффективность вашего сайта. Введите email, и мы отправим чек-лист + примеры хороших лендингов.</p>
+            <form class="modal-form lead-form" data-type="dev_checklist">
                 <div class="form-group">
-                    <label for="dev-name">Ваше имя</label>
-                    <input type="text" id="dev-name" name="name" required placeholder="Иван">
+                    <label for="devName">Ваше имя</label>
+                    <input type="text" id="devName" name="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="dev-email">Email</label>
-                    <input type="email" id="dev-email" name="email" required placeholder="ivan@company.ru">
-                </div>
-                <button type="submit" class="btn btn-primary btn-full">Получить чек-лист</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Audit Modal -->
-    <div class="modal" id="audit-modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('audit-modal')">&times;</button>
-            <h3>Запись на бесплатный экспресс-аудит</h3>
-            <p>15 минут разбора вашей ситуации. Честно о перспективах и следующих шагах.</p>
-            <form class="modal-form" onsubmit="handleFormSubmit(event, 'audit')">
-                <div class="form-group">
-                    <label for="audit-name">Ваше имя</label>
-                    <input type="text" id="audit-name" name="name" required placeholder="Иван">
+                    <label for="devEmail">Email</label>
+                    <input type="email" id="devEmail" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="audit-phone">Телефон</label>
-                    <input type="tel" id="audit-phone" name="phone" required placeholder="+7 (999) 000-00-00">
+                    <label for="devPhone">Телефон</label>
+                    <input type="tel" id="devPhone" name="phone" required>
                 </div>
-                <div class="form-group">
-                    <label for="audit-site">Сайт (если есть)</label>
-                    <input type="url" id="audit-site" name="website" placeholder="https://mysite.ru">
-                </div>
-                <div class="form-group">
-                    <label for="audit-task">Ваша задача</label>
-                    <textarea id="audit-task" name="message" rows="3" placeholder="Нужна контекстная реклама для..."></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-full">Записаться на аудит</button>
+                <button type="submit" class="btn btn-primary btn-full">Скачать чек-лист</button>
             </form>
         </div>
     </div>

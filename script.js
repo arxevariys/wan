@@ -1,219 +1,424 @@
-// Mobile Menu Toggle
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const navMenu = document.getElementById('navMenu');
+/**
+ * LeadGenerator - Main JavaScript
+ * Handles: mobile menu, modals, form validation, smooth scroll, animations
+ */
 
-if (mobileMenuBtn && navMenu) {
-    mobileMenuBtn.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // ========================================
+    // Mobile Menu Toggle
+    // ========================================
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mainNav = document.getElementById('mainNav');
+    
+    if (mobileMenuBtn && mainNav) {
+        mobileMenuBtn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mainNav.classList.toggle('active');
+            
+            // Update ARIA attribute
+            const isExpanded = this.classList.contains('active');
+            this.setAttribute('aria-expanded', isExpanded);
+        });
+        
+        // Close menu when clicking on a link
+        mainNav.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuBtn.classList.remove('active');
+                mainNav.classList.remove('active');
+            });
+        });
+    }
+    
+    // ========================================
+    // Modal Functionality
+    // ========================================
+    const openModalButtons = document.querySelectorAll('.open-modal');
+    const modals = document.querySelectorAll('.modal');
+    const modalCloseButtons = document.querySelectorAll('.modal-close');
+    const modalOverlays = document.querySelectorAll('.modal-overlay');
+    
+    // Open modal
+    openModalButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const modalId = this.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                
+                // Focus first input in modal for accessibility
+                const firstInput = modal.querySelector('input');
+                if (firstInput) {
+                    setTimeout(() => firstInput.focus(), 100);
+                }
+            }
+        });
     });
-}
-
-// Smooth Scroll
-function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-    }
-}
-
-// Modal Functions
-function openModal(modalId) {
-    const modal = document.getElementById(modalId);
-    if (modal) {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-}
-
-function closeModal(modalId) {
-    const modal = document.getElementById(modalId);
-    if (modal) {
+    
+    // Close modal functions
+    function closeModal(modal) {
         modal.classList.remove('active');
         document.body.style.overflow = '';
-    }
-}
-
-// Close modal on outside click
-document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('modal')) {
-        e.target.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-});
-
-// Close modal on Escape key
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        const activeModal = document.querySelector('.modal.active');
-        if (activeModal) {
-            activeModal.classList.remove('active');
-            document.body.style.overflow = '';
+        
+        // Return focus to the button that opened the modal
+        const openedBy = document.querySelector('[data-modal="' + modal.id + '"]');
+        if (openedBy) {
+            openedBy.focus();
         }
     }
-});
-
-// FAQ Toggle
-function toggleFaq(button) {
-    const answer = button.nextElementSibling;
-    const isActive = button.classList.contains('active');
     
-    // Close all other FAQs
-    document.querySelectorAll('.faq-question').forEach(btn => {
-        btn.classList.remove('active');
-        btn.nextElementSibling.classList.remove('active');
+    // Close on close button click
+    modalCloseButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const modal = this.closest('.modal');
+            closeModal(modal);
+        });
     });
     
-    // Toggle current FAQ
-    if (!isActive) {
-        button.classList.add('active');
-        answer.classList.add('active');
-    }
-}
-
-// Form Submit Handler
-function handleFormSubmit(event, formType) {
-    event.preventDefault();
+    // Close on overlay click
+    modalOverlays.forEach(overlay => {
+        overlay.addEventListener('click', function() {
+            const modal = this.closest('.modal');
+            closeModal(modal);
+        });
+    });
     
-    const form = event.target;
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
-    
-    // Validate phone number
-    if (data.phone) {
-        const phoneRegex = /^[\+]?[0-9\s\-\(\)]{10,20}$/;
-        if (!phoneRegex.test(data.phone)) {
-            alert('Пожалуйста, введите корректный номер телефона');
-            return;
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            const activeModal = document.querySelector('.modal.active');
+            if (activeModal) {
+                closeModal(activeModal);
+            }
         }
-    }
+    });
     
-    // Validate email if present
-    if (data.email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(data.email)) {
-            alert('Пожалуйста, введите корректный email');
-            return;
-        }
-    }
+    // ========================================
+    // Form Validation & Submission
+    // ========================================
+    const forms = document.querySelectorAll('form');
     
-    // Simulate form submission
-    console.log('Form submitted:', formType, data);
+    forms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic validation
+            const requiredFields = form.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                const value = field.value.trim();
+                
+                // Remove previous error states
+                field.classList.remove('error');
+                const errorDiv = field.parentElement.querySelector('.form-error');
+                if (errorDiv) errorDiv.remove();
+                
+                // Validate based on field type
+                if (!value) {
+                    isValid = false;
+                    showFieldError(field, 'Это поле обязательно для заполнения');
+                } else if (field.type === 'email' && !isValidEmail(value)) {
+                    isValid = false;
+                    showFieldError(field, 'Введите корректный email');
+                } else if (field.type === 'tel' && !isValidPhone(value)) {
+                    isValid = false;
+                    showFieldError(field, 'Введите корректный номер телефона');
+                } else if (field.type === 'url' && value && !isValidUrl(value)) {
+                    isValid = false;
+                    showFieldError(field, 'Введите корректный URL сайта');
+                }
+            });
+            
+            if (isValid) {
+                // Simulate form submission
+                const submitButton = form.querySelector('button[type="submit"]');
+                const originalText = submitButton.textContent;
+                
+                submitButton.disabled = true;
+                submitButton.textContent = 'Отправка...';
+                
+                // Here you would normally send data to your backend/CRM
+                // For demo purposes, we'll simulate a successful submission
+                setTimeout(() => {
+                    showSuccessMessage(form);
+                    form.reset();
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalText;
+                    
+                    // Close modal if form is inside one
+                    const modal = form.closest('.modal');
+                    if (modal) {
+                        closeModal(modal);
+                    }
+                }, 1500);
+            }
+        });
+        
+        // Real-time validation on blur
+        form.querySelectorAll('input, textarea').forEach(field => {
+            field.addEventListener('blur', function() {
+                validateField(this);
+            });
+            
+            // Clear error on input
+            field.addEventListener('input', function() {
+                const errorDiv = this.parentElement.querySelector('.form-error');
+                if (errorDiv && this.classList.contains('error')) {
+                    validateField(this);
+                }
+            });
+        });
+    });
     
-    // Show success message
-    alert('Спасибо! Ваша заявка принята. Мы свяжемся с вами в ближайшее время.');
-    
-    // Reset form and close modal
-    form.reset();
-    const modal = form.closest('.modal');
-    if (modal) {
-        closeModal(modal.id);
-    }
-    
-    // Here you would typically send data to your backend or CRM
-    // Example: fetch('/api/submit', { method: 'POST', body: JSON.stringify(data) })
-}
-
-// Calculator Logic
-function calculateLeadCost(event) {
-    event.preventDefault();
-    
-    const niche = document.getElementById('calc-niche').value;
-    const budget = parseFloat(document.getElementById('calc-budget').value);
-    const region = document.getElementById('calc-region').value;
-    const conversion = parseFloat(document.getElementById('calc-conversion').value) || 2.5;
-    
-    if (!niche || !budget || !region) {
-        alert('Пожалуйста, заполните все поля');
-        return;
-    }
-    
-    // CPC rates by niche (average values for Russia)
-    const cpcRates = {
-        ecommerce: { moscow: 45, spb: 35, million: 28, region: 22, small: 15 },
-        services: { moscow: 55, spb: 42, million: 35, region: 28, small: 18 },
-        b2b: { moscow: 120, spb: 95, million: 75, region: 55, small: 35 },
-        medicine: { moscow: 85, spb: 65, million: 50, region: 38, small: 25 },
-        construction: { moscow: 150, spb: 120, million: 95, region: 70, small: 45 },
-        education: { moscow: 65, spb: 50, million: 40, region: 30, small: 20 },
-        other: { moscow: 50, spb: 40, million: 32, region: 25, small: 16 }
-    };
-    
-    const baseCpc = cpcRates[niche]?.[region] || 30;
-    
-    // Calculate metrics
-    const clicks = Math.floor(budget / baseCpc);
-    const leads = Math.floor(clicks * (conversion / 100));
-    const costPerLead = leads > 0 ? Math.round(budget / leads) : 0;
-    
-    // Display results
-    document.getElementById('cpc-value').textContent = `${baseCpc}₽`;
-    document.getElementById('clicks-value').textContent = clicks.toLocaleString();
-    document.getElementById('leads-value').textContent = leads.toLocaleString();
-    document.getElementById('cost-per-lead').textContent = `${costPerLead}₽`;
-    
-    // Show result section
-    document.getElementById('calculator-result').style.display = 'block';
-    
-    // Scroll to results
-    setTimeout(() => {
-        document.getElementById('calculator-result').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }, 100);
-}
-
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', () => {
-    // Add active class to current page nav link
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.nav-link').forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
-            link.classList.add('active');
+    function validateField(field) {
+        const value = field.value.trim();
+        const errorDiv = field.parentElement.querySelector('.form-error');
+        
+        if (!value && field.hasAttribute('required')) {
+            showFieldError(field, 'Это поле обязательно для заполнения');
+            return false;
+        } else if (field.type === 'email' && value && !isValidEmail(value)) {
+            showFieldError(field, 'Введите корректный email');
+            return false;
+        } else if (field.type === 'tel' && value && !isValidPhone(value)) {
+            showFieldError(field, 'Введите корректный номер телефона');
+            return false;
+        } else if (field.type === 'url' && value && !isValidUrl(value)) {
+            showFieldError(field, 'Введите корректный URL сайта');
+            return false;
         } else {
-            link.classList.remove('active');
+            if (errorDiv) errorDiv.remove();
+            field.classList.remove('error');
+            return true;
         }
+    }
+    
+    function showFieldError(field, message) {
+        field.classList.add('error');
+        
+        // Remove existing error message
+        const existingError = field.parentElement.querySelector('.form-error');
+        if (existingError) existingError.remove();
+        
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'form-error';
+        errorDiv.textContent = message;
+        errorDiv.style.cssText = 'color: #ef4444; font-size: 0.75rem; margin-top: 0.25rem;';
+        
+        field.parentElement.appendChild(errorDiv);
+        field.setAttribute('aria-invalid', 'true');
+        field.setAttribute('aria-describedby', 'form-error');
+    }
+    
+    function showSuccessMessage(form) {
+        const successDiv = document.createElement('div');
+        successDiv.className = 'form-success';
+        successDiv.innerHTML = `
+            <div style="text-align: center; padding: 2rem;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">✅</div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: #10b981;">Заявка отправлена!</h3>
+                <p style="color: #64748b;">Мы свяжемся с вами в течение 24 часов.</p>
+            </div>
+        `;
+        
+        form.innerHTML = '';
+        form.appendChild(successDiv);
+    }
+    
+    // ========================================
+    // Validation Helper Functions
+    // ========================================
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+    
+    function isValidPhone(phone) {
+        // Remove all non-digit characters except +
+        const cleaned = phone.replace(/[^\d+]/g, '');
+        // Check if it has at least 10 digits (including country code)
+        const digitCount = cleaned.replace(/\D/g, '').length;
+        return digitCount >= 10 && digitCount <= 15;
+    }
+    
+    function isValidUrl(url) {
+        try {
+            new URL(url);
+            return true;
+        } catch (_) {
+            return false;
+        }
+    }
+    
+    // ========================================
+    // Smooth Scroll for Anchor Links
+    // ========================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Skip if it's just "#" or empty
+            if (href === '#' || href === '') return;
+            
+            const target = document.querySelector(href);
+            
+            if (target) {
+                e.preventDefault();
+                
+                const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = targetPosition - headerHeight - 20;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (mobileMenuBtn && mobileMenuBtn.classList.contains('active')) {
+                    mobileMenuBtn.click();
+                }
+            }
+        });
     });
     
-    // Add scroll animation for sections
+    // ========================================
+    // Header Scroll Effect
+    // ========================================
+    const header = document.querySelector('.header');
+    
+    if (header) {
+        let lastScroll = 0;
+        
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                header.style.boxShadow = 'var(--shadow-md)';
+            } else {
+                header.style.boxShadow = 'var(--shadow-sm)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+    }
+    
+    // ========================================
+    // FAQ Accordion Enhancement
+    // ========================================
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        item.addEventListener('toggle', function() {
+            // Close other items when one is opened (optional accordion behavior)
+            if (this.open) {
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== this && otherItem.open) {
+                        otherItem.open = false;
+                    }
+                });
+            }
+        });
+    });
+    
+    // ========================================
+    // Intersection Observer for Animations
+    // ========================================
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
     };
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('animate-in');
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
     
     // Observe elements for animation
-    document.querySelectorAll('.service-card, .case-card, .problem-card, .faq-item').forEach(el => {
+    document.querySelectorAll('.pain-card, .service-card, .case-card, .process-step, .faq-item').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
-});
-
-// Phone input mask (simple version)
-document.addEventListener('input', (e) => {
-    if (e.target.type === 'tel') {
-        let value = e.target.value.replace(/\D/g, '');
-        if (value.length > 11) value = value.slice(0, 11);
-        
-        if (value.length > 0) {
-            if (value[0] === '7' || value[0] === '8') {
-                value = value.slice(1);
+    
+    // Add animate-in styles dynamically
+    const style = document.createElement('style');
+    style.textContent = `
+        .animate-in {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // ========================================
+    // Phone Input Mask (Simple Implementation)
+    // ========================================
+    const phoneInputs = document.querySelectorAll('input[type="tel"]');
+    
+    phoneInputs.forEach(input => {
+        input.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            
+            if (value.length > 0) {
+                // Add country code if not present
+                if (!value.startsWith('7') && !value.startsWith('8')) {
+                    value = '7' + value;
+                }
+                
+                // Format: +7 (XXX) XXX-XX-XX
+                if (value.length > 1) {
+                    value = '+7 (' + value.slice(1, 4);
+                }
+                if (value.length > 7) {
+                    value = value.slice(0, 7) + ') ' + value.slice(7, 10);
+                }
+                if (value.length > 11) {
+                    value = value.slice(0, 11) + '-' + value.slice(11, 13);
+                }
+                if (value.length > 14) {
+                    value = value.slice(0, 14) + '-' + value.slice(14, 16);
+                }
             }
             
-            let formatted = '+7';
-            if (value.length > 0) formatted += ' (' + value.slice(0, 3);
-            if (value.length > 3) formatted += ') ' + value.slice(3, 6);
-            if (value.length > 6) formatted += '-' + value.slice(6, 8);
-            if (value.length > 8) formatted += '-' + value.slice(8, 10);
-            
-            e.target.value = formatted;
-        }
+            e.target.value = value;
+        });
+    });
+    
+    // ========================================
+    // Track CTA Clicks (for Analytics)
+    // ========================================
+    document.querySelectorAll('.btn-primary, .nav-cta').forEach(button => {
+        button.addEventListener('click', function() {
+            // You can integrate with Google Analytics, Yandex Metrica, etc.
+            // Example: gtag('event', 'click', { event_category: 'CTA', event_label: this.textContent });
+            console.log('CTA clicked:', this.textContent.trim());
+        });
+    });
+    
+    // ========================================
+    // Lazy Load Images (if any are added later)
+    // ========================================
+    if ('loading' in HTMLImageElement.prototype) {
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        images.forEach(img => {
+            img.src = img.dataset.src;
+        });
+    } else {
+        // Fallback for browsers that don't support lazy loading
+        const script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+        document.body.appendChild(script);
     }
+    
+    console.log('LeadGenerator site initialized successfully! 🚀');
 });
