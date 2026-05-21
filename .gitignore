@@ -1,49 +1,51 @@
-# Compiled and build artifacts
+```gitignore
+# Excel files
+*.xlsx
+
+# Python compiled files
 *.pyc
 __pycache__/
-*.o
-*.obj
+
+# Environment files
+.env
+.env.local
+*.env.*
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependencies
+node_modules/
+venv/
+.venv/
+.mypy_cache/
+.pytest_cache/
+.coverage
+coverage/
+htmlcov/
+
+# Build artifacts
 dist/
 build/
-*.class
+target/
 *.exe
 *.dll
 *.so
 *.a
 *.out
 
-# Dependencies
-.venv/
-venv/
-node_modules/
-.mypy_cache/
-.pytest_cache/
-target/
-.gradle/
-
-# Logs and temp files
-*.log
-*.tmp
-*.swp
-*.swo
-
-# Environment
-.env
-.env.local
-*.env.*
-
-# Editors
-.vscode/
-.idea/
-
 # System files
 .DS_Store
 Thumbs.db
-
-# Coverage
-coverage/
-htmlcov/
-.coverage
 
 # Compressed files
 *.zip
@@ -68,3 +70,4 @@ htmlcov/
 *.tar.bz2
 *.tar.xz
 *.tar.zst
+```
